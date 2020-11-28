@@ -219,7 +219,7 @@ extension SwiftCDPDomains.LayerTree {
     
     public struct Result: Decodable {
       /// - description: The array of canvas function calls.
-      public var commandLog: [[String: JsonPrimitive]]
+      public var commandLog: [[String: JsonValue]]
       
     }
     public static func transform(client: ChromeClient, result: Result) -> Result {

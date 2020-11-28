@@ -27,7 +27,7 @@ extension SwiftCDPDomains.Tracing {
   public struct dataCollected: ModelEvent {
     public typealias Model = SwiftCDPDomains.Tracing
     
-    public var value: [[String: JsonPrimitive]]
+    public var value: [[String: JsonValue]]
     
   }
 }

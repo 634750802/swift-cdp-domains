@@ -222,10 +222,10 @@ extension SwiftCDPDomains.DOM {
     public var bounds: Quad
     
     /// - description: Shape coordinate details
-    public var shape: [[String: JsonPrimitive]]
+    public var shape: [JsonValue]
     
     /// - description: Margin shape bounds
-    public var marginShape: [[String: JsonPrimitive]]
+    public var marginShape: [JsonValue]
     
   }
 }

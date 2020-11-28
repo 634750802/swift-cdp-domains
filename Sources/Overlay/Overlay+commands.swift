@@ -71,7 +71,7 @@ extension SwiftCDPDomains.Overlay {
     
     public struct Result: Decodable {
       /// - description: Highlight data for the node.
-      public var highlight: [String: JsonPrimitive]
+      public var highlight: [String: JsonValue]
       
     }
     public static func transform(client: ChromeClient, result: Result) -> Result {
@@ -96,7 +96,7 @@ extension SwiftCDPDomains.Overlay {
     
     public struct Result: Decodable {
       /// - description: Grid Highlight data for the node ids provided.
-      public var highlights: [String: JsonPrimitive]
+      public var highlights: [String: JsonValue]
       
     }
     public static func transform(client: ChromeClient, result: Result) -> Result {
@@ -121,7 +121,7 @@ extension SwiftCDPDomains.Overlay {
     
     public struct Result: Decodable {
       /// - description: Source order highlight data for the node id provided.
-      public var highlight: [String: JsonPrimitive]
+      public var highlight: [String: JsonValue]
       
     }
     public static func transform(client: ChromeClient, result: Result) -> Result {

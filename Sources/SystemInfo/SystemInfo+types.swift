@@ -127,10 +127,10 @@ extension SwiftCDPDomains.SystemInfo {
     public var devices: [GPUDevice]
     
     /// - description: An optional dictionary of additional GPU related attributes.
-    public var auxAttributes: [String: JsonPrimitive]?
+    public var auxAttributes: [String: JsonValue]?
     
     /// - description: An optional dictionary of graphics features and their status.
-    public var featureStatus: [String: JsonPrimitive]?
+    public var featureStatus: [String: JsonValue]?
     
     /// - description: An optional array of GPU driver bug workarounds.
     public var driverBugWorkarounds: [String]

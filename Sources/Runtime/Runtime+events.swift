@@ -145,7 +145,7 @@ extension SwiftCDPDomains.Runtime {
     
     public var object: RemoteObject
     
-    public var hints: [String: JsonPrimitive]
+    public var hints: [String: JsonValue]
     
   }
 }

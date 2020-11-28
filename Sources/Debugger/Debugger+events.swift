@@ -31,7 +31,7 @@ extension SwiftCDPDomains.Debugger {
     public var reason: String
     
     /// - description: Object containing break-specific auxiliary properties.
-    public var data: [String: JsonPrimitive]?
+    public var data: [String: JsonValue]?
     
     /// - description: Hit breakpoints IDs
     public var hitBreakpoints: [String]?
@@ -90,7 +90,7 @@ extension SwiftCDPDomains.Debugger {
     public var hash: String
     
     /// - description: Embedder-specific auxiliary data.
-    public var executionContextAuxData: [String: JsonPrimitive]?
+    public var executionContextAuxData: [String: JsonValue]?
     
     /// - description: URL of source map associated with script (if any).
     public var sourceMapURL: String?
@@ -154,7 +154,7 @@ extension SwiftCDPDomains.Debugger {
     public var hash: String
     
     /// - description: Embedder-specific auxiliary data.
-    public var executionContextAuxData: [String: JsonPrimitive]?
+    public var executionContextAuxData: [String: JsonValue]?
     
     /// - description: True, if this script is generated as a result of the live edit operation.
     /// - intention: This is an experimental property.

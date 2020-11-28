@@ -110,7 +110,7 @@ extension SwiftCDPDomains.Accessibility {
     public var type: AXValueType
     
     /// - description: The computed value of this property.
-    public var value: [String: JsonPrimitive]?
+    public var value: JsonValue?
     
     /// - description: One or more related nodes, if applicable.
     public var relatedNodes: [AXRelatedNode]?

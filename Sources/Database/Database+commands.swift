@@ -54,7 +54,7 @@ extension SwiftCDPDomains.Database {
     
     public struct Result: Decodable {
       public var columnNames: [String]?
-      public var values: [[String: JsonPrimitive]]?
+      public var values: [JsonValue]?
       public var sqlError: Error?
       
     }

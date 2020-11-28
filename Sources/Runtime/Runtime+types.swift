@@ -58,7 +58,7 @@ extension SwiftCDPDomains.Runtime {
     public var className: String?
     
     /// - description: Remote object value in case of primitive values or JSON values (if it was requested).
-    public var value: [String: JsonPrimitive]?
+    public var value: JsonValue?
     
     /// - description: Primitive value which can not be JSON-stringified does not have `value`, but gets this
     /// property.
@@ -234,7 +234,7 @@ extension SwiftCDPDomains.Runtime {
   /// unserializable primitive value or neither of (for undefined) them should be specified.
   public struct CallArgument: Codable {
     /// - description: Primitive value or serializable javascript object.
-    public var value: [String: JsonPrimitive]?
+    public var value: JsonValue?
     
     /// - description: Primitive value which can not be JSON-stringified.
     public var unserializableValue: UnserializableValue?
@@ -277,7 +277,7 @@ extension SwiftCDPDomains.Runtime {
     public var name: String
     
     /// - description: Embedder-specific auxiliary data.
-    public var auxData: [String: JsonPrimitive]?
+    public var auxData: [String: JsonValue]?
     
   }
 }
