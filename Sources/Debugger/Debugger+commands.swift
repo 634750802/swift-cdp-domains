@@ -56,9 +56,9 @@ extension SwiftCDPDomains.Debugger {
     /// - description: The maximum size in bytes of collected scripts (not referenced by other heap objects)
     /// the debugger can hold. Puts no limit if paramter is omitted.
     /// - intention: This is an experimental property.
-    public var maxScriptsCacheSize: JsonNumber?
+    public var maxScriptsCacheSize: Int?
     
-    public init(maxScriptsCacheSize: JsonNumber? = nil) {
+    public init(maxScriptsCacheSize: Int? = nil) {
       self.maxScriptsCacheSize = maxScriptsCacheSize
     }
     

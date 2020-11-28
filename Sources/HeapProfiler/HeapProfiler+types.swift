@@ -28,7 +28,7 @@ extension SwiftCDPDomains.HeapProfiler {
     public var callFrame: SwiftCDPDomains.Runtime.CallFrame
     
     /// - description: Allocations size in bytes for the node excluding children.
-    public var selfSize: JsonNumber
+    public var selfSize: Int
     
     /// - description: Node id. Ids are unique across all profiles collected between startSampling and stopSampling.
     public var id: Int
@@ -44,14 +44,14 @@ extension SwiftCDPDomains.HeapProfiler {
   /// - description: A single sample from a sampling profile.
   public struct SamplingHeapProfileSample: Codable {
     /// - description: Allocation size in bytes attributed to the sample.
-    public var size: JsonNumber
+    public var size: Int
     
     /// - description: Id of the corresponding profile tree node.
     public var nodeId: Int
     
     /// - description: Time-ordered sample ordinal number. It is unique across all profiles retrieved
     /// between startSampling and stopSampling.
-    public var ordinal: JsonNumber
+    public var ordinal: Int
     
   }
 }

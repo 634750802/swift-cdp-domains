@@ -136,7 +136,7 @@ extension SwiftCDPDomains.Page {
     
     /// - description: Delay (in seconds) until the navigation is scheduled to begin. The navigation is not
     /// guaranteed to start.
-    public var delay: JsonNumber
+    public var delay: Int
     
     /// - description: The reason for the navigation.
     public var reason: ClientNavigationReason
@@ -198,10 +198,10 @@ extension SwiftCDPDomains.Page {
     public var guid: String
     
     /// - description: Total expected bytes to download.
-    public var totalBytes: JsonNumber
+    public var totalBytes: Int
     
     /// - description: Total bytes received.
-    public var receivedBytes: JsonNumber
+    public var receivedBytes: Int
     
     /// - description: Download status.
     public var state: String

@@ -175,7 +175,7 @@ extension SwiftCDPDomains.DOM {
     public var b: Int
     
     /// - description: The alpha component, in the [0-1] range (default: 1).
-    public var a: JsonNumber?
+    public var a: Double?
     
   }
 }
@@ -235,16 +235,16 @@ extension SwiftCDPDomains.DOM {
   /// - description: Rectangle.
   public struct Rect: Codable {
     /// - description: X coordinate
-    public var x: JsonNumber
+    public var x: Int
     
     /// - description: Y coordinate
-    public var y: JsonNumber
+    public var y: Int
     
     /// - description: Rectangle width
-    public var width: JsonNumber
+    public var width: Int
     
     /// - description: Rectangle height
-    public var height: JsonNumber
+    public var height: Int
     
   }
 }

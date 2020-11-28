@@ -92,9 +92,9 @@ extension SwiftCDPDomains.DOMSnapshot {
     public var originURL: String?
     
     /// - description: Scroll offsets, set when this node is a Document.
-    public var scrollOffsetX: JsonNumber?
+    public var scrollOffsetX: Int?
     
-    public var scrollOffsetY: JsonNumber?
+    public var scrollOffsetY: Int?
     
   }
 }
@@ -255,16 +255,16 @@ extension SwiftCDPDomains.DOMSnapshot {
     public var textBoxes: TextBoxSnapshot
     
     /// - description: Horizontal scroll offset.
-    public var scrollOffsetX: JsonNumber?
+    public var scrollOffsetX: Int?
     
     /// - description: Vertical scroll offset.
-    public var scrollOffsetY: JsonNumber?
+    public var scrollOffsetY: Int?
     
     /// - description: Document content width.
-    public var contentWidth: JsonNumber?
+    public var contentWidth: Int?
     
     /// - description: Document content height.
-    public var contentHeight: JsonNumber?
+    public var contentHeight: Int?
     
   }
 }

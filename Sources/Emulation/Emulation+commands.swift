@@ -338,15 +338,15 @@ extension SwiftCDPDomains.Emulation {
     public static let name = "setGeolocationOverride"
     
     /// - description: Mock latitude
-    public var latitude: JsonNumber?
+    public var latitude: Double?
     
     /// - description: Mock longitude
-    public var longitude: JsonNumber?
+    public var longitude: Double?
     
     /// - description: Mock accuracy
     public var accuracy: JsonNumber?
     
-    public init(latitude: JsonNumber? = nil, longitude: JsonNumber? = nil, accuracy: JsonNumber? = nil) {
+    public init(latitude: Double? = nil, longitude: Double? = nil, accuracy: JsonNumber? = nil) {
       self.latitude = latitude
       self.longitude = longitude
       self.accuracy = accuracy

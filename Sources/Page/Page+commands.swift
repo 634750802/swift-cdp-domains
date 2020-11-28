@@ -613,25 +613,25 @@ extension SwiftCDPDomains.Page {
     public var printBackground: Bool?
     
     /// - description: Scale of the webpage rendering. Defaults to 1.
-    public var scale: JsonNumber?
+    public var scale: Double?
     
     /// - description: Paper width in inches. Defaults to 8.5 inches.
-    public var paperWidth: JsonNumber?
+    public var paperWidth: Int?
     
     /// - description: Paper height in inches. Defaults to 11 inches.
-    public var paperHeight: JsonNumber?
+    public var paperHeight: Int?
     
     /// - description: Top margin in inches. Defaults to 1cm (~0.4 inches).
-    public var marginTop: JsonNumber?
+    public var marginTop: Int?
     
     /// - description: Bottom margin in inches. Defaults to 1cm (~0.4 inches).
-    public var marginBottom: JsonNumber?
+    public var marginBottom: Int?
     
     /// - description: Left margin in inches. Defaults to 1cm (~0.4 inches).
-    public var marginLeft: JsonNumber?
+    public var marginLeft: Int?
     
     /// - description: Right margin in inches. Defaults to 1cm (~0.4 inches).
-    public var marginRight: JsonNumber?
+    public var marginRight: Int?
     
     /// - description: Paper ranges to print, e.g., '1-5, 8, 11-13'. Defaults to the empty string, which means
     /// print all pages.
@@ -662,7 +662,7 @@ extension SwiftCDPDomains.Page {
     /// - intention: This is an experimental property.
     public var transferMode: String?
     
-    public init(landscape: Bool? = nil, displayHeaderFooter: Bool? = nil, printBackground: Bool? = nil, scale: JsonNumber? = nil, paperWidth: JsonNumber? = nil, paperHeight: JsonNumber? = nil, marginTop: JsonNumber? = nil, marginBottom: JsonNumber? = nil, marginLeft: JsonNumber? = nil, marginRight: JsonNumber? = nil, pageRanges: String? = nil, ignoreInvalidPageRanges: Bool? = nil, headerTemplate: String? = nil, footerTemplate: String? = nil, preferCSSPageSize: Bool? = nil, transferMode: String? = nil) {
+    public init(landscape: Bool? = nil, displayHeaderFooter: Bool? = nil, printBackground: Bool? = nil, scale: Double? = nil, paperWidth: Int? = nil, paperHeight: Int? = nil, marginTop: Int? = nil, marginBottom: Int? = nil, marginLeft: Int? = nil, marginRight: Int? = nil, pageRanges: String? = nil, ignoreInvalidPageRanges: Bool? = nil, headerTemplate: String? = nil, footerTemplate: String? = nil, preferCSSPageSize: Bool? = nil, transferMode: String? = nil) {
       self.landscape = landscape
       self.displayHeaderFooter = displayHeaderFooter
       self.printBackground = printBackground
@@ -879,14 +879,14 @@ extension SwiftCDPDomains.Page {
     public var height: Int
     
     /// - description: Overriding device scale factor value. 0 disables the override.
-    public var deviceScaleFactor: JsonNumber
+    public var deviceScaleFactor: Double
     
     /// - description: Whether to emulate mobile device. This includes viewport meta tag, overlay scrollbars, text
     /// autosizing and more.
     public var mobile: Bool
     
     /// - description: Scale to apply to resulting view image.
-    public var scale: JsonNumber?
+    public var scale: Double?
     
     /// - description: Overriding screen width value in pixels (minimum 0, maximum 10000000).
     public var screenWidth: Int?
@@ -909,7 +909,7 @@ extension SwiftCDPDomains.Page {
     /// - description: The viewport dimensions and scale. If not set, the override is cleared.
     public var viewport: Viewport?
     
-    public init(width: Int, height: Int, deviceScaleFactor: JsonNumber, mobile: Bool, scale: JsonNumber? = nil, screenWidth: Int? = nil, screenHeight: Int? = nil, positionX: Int? = nil, positionY: Int? = nil, dontSetVisibleSize: Bool? = nil, screenOrientation: SwiftCDPDomains.Emulation.ScreenOrientation? = nil, viewport: Viewport? = nil) {
+    public init(width: Int, height: Int, deviceScaleFactor: Double, mobile: Bool, scale: Double? = nil, screenWidth: Int? = nil, screenHeight: Int? = nil, positionX: Int? = nil, positionY: Int? = nil, dontSetVisibleSize: Bool? = nil, screenOrientation: SwiftCDPDomains.Emulation.ScreenOrientation? = nil, viewport: Viewport? = nil) {
       self.width = width
       self.height = height
       self.deviceScaleFactor = deviceScaleFactor
@@ -940,15 +940,15 @@ extension SwiftCDPDomains.Page {
     public static let name = "setDeviceOrientationOverride"
     
     /// - description: Mock alpha
-    public var alpha: JsonNumber
+    public var alpha: Double
     
     /// - description: Mock beta
-    public var beta: JsonNumber
+    public var beta: Double
     
     /// - description: Mock gamma
-    public var gamma: JsonNumber
+    public var gamma: Double
     
-    public init(alpha: JsonNumber, beta: JsonNumber, gamma: JsonNumber) {
+    public init(alpha: Double, beta: Double, gamma: Double) {
       self.alpha = alpha
       self.beta = beta
       self.gamma = gamma
@@ -1064,15 +1064,15 @@ extension SwiftCDPDomains.Page {
     public static let name = "setGeolocationOverride"
     
     /// - description: Mock latitude
-    public var latitude: JsonNumber?
+    public var latitude: Double?
     
     /// - description: Mock longitude
-    public var longitude: JsonNumber?
+    public var longitude: Double?
     
     /// - description: Mock accuracy
-    public var accuracy: JsonNumber?
+    public var accuracy: Double?
     
-    public init(latitude: JsonNumber? = nil, longitude: JsonNumber? = nil, accuracy: JsonNumber? = nil) {
+    public init(latitude: Double? = nil, longitude: Double? = nil, accuracy: Double? = nil) {
       self.latitude = latitude
       self.longitude = longitude
       self.accuracy = accuracy

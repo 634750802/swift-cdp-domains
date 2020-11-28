@@ -20,13 +20,13 @@ extension SwiftCDPDomains.Animation {
     public var playState: String
     
     /// - description: `Animation`'s playback rate.
-    public var playbackRate: JsonNumber
+    public var playbackRate: Double
     
     /// - description: `Animation`'s start time.
-    public var startTime: JsonNumber
+    public var startTime: Int
     
     /// - description: `Animation`'s current time.
-    public var currentTime: JsonNumber
+    public var currentTime: Int
     
     /// - description: Animation type of `Animation`.
     public var type: String
@@ -46,19 +46,19 @@ extension SwiftCDPDomains.Animation {
   /// - description: AnimationEffect instance
   public struct AnimationEffect: Codable {
     /// - description: `AnimationEffect`'s delay.
-    public var delay: JsonNumber
+    public var delay: Int
     
     /// - description: `AnimationEffect`'s end delay.
-    public var endDelay: JsonNumber
+    public var endDelay: Int
     
     /// - description: `AnimationEffect`'s iteration start.
-    public var iterationStart: JsonNumber
+    public var iterationStart: Int
     
     /// - description: `AnimationEffect`'s iterations.
-    public var iterations: JsonNumber
+    public var iterations: Int
     
     /// - description: `AnimationEffect`'s iteration duration.
-    public var duration: JsonNumber
+    public var duration: Int
     
     /// - description: `AnimationEffect`'s playback direction.
     public var direction: String

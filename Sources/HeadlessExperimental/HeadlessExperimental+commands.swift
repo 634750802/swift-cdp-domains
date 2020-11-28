@@ -12,11 +12,11 @@ extension SwiftCDPDomains.HeadlessExperimental {
     
     /// - description: Timestamp of this BeginFrame in Renderer TimeTicks (milliseconds of uptime). If not set,
     /// the current time will be used.
-    public var frameTimeTicks: JsonNumber?
+    public var frameTimeTicks: Int?
     
     /// - description: The interval between BeginFrames that is reported to the compositor, in milliseconds.
     /// Defaults to a 60 frames/second interval, i.e. about 16.666 milliseconds.
-    public var interval: JsonNumber?
+    public var interval: Int?
     
     /// - description: Whether updates should not be committed and drawn onto the display. False by default. If
     /// true, only side effects of the BeginFrame will be run, such as layout and animations, but
@@ -28,7 +28,7 @@ extension SwiftCDPDomains.HeadlessExperimental {
     /// during renderer initialization. In such a case, no screenshot data will be returned.
     public var screenshot: ScreenshotParams?
     
-    public init(frameTimeTicks: JsonNumber? = nil, interval: JsonNumber? = nil, noDisplayUpdates: Bool? = nil, screenshot: ScreenshotParams? = nil) {
+    public init(frameTimeTicks: Int? = nil, interval: Int? = nil, noDisplayUpdates: Bool? = nil, screenshot: ScreenshotParams? = nil) {
       self.frameTimeTicks = frameTimeTicks
       self.interval = interval
       self.noDisplayUpdates = noDisplayUpdates

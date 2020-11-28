@@ -12,7 +12,7 @@ extension SwiftCDPDomains.IndexedDB {
     
     /// - description: Database version (type is not 'integer', as the standard
     /// requires the version number to be 'unsigned long long')
-    public var version: JsonNumber
+    public var version: Int
     
     /// - description: Object stores in this database.
     public var objectStores: [ObjectStore]
@@ -66,13 +66,13 @@ extension SwiftCDPDomains.IndexedDB {
     public var type: String
     
     /// - description: Number value.
-    public var number: JsonNumber?
+    public var number: Int?
     
     /// - description: String value.
     public var string: String?
     
     /// - description: Date value.
-    public var date: JsonNumber?
+    public var date: Int?
     
     /// - description: Array value.
     public var array: [StructReference<Key>]?

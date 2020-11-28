@@ -37,10 +37,10 @@ extension SwiftCDPDomains.Profiler {
     public var nodes: [ProfileNode]
     
     /// - description: Profiling start timestamp in microseconds.
-    public var startTime: JsonNumber
+    public var startTime: Int
     
     /// - description: Profiling end timestamp in microseconds.
-    public var endTime: JsonNumber
+    public var endTime: Int
     
     /// - description: Ids of samples top nodes.
     public var samples: [Int]?

@@ -136,9 +136,9 @@ extension SwiftCDPDomains.Animation {
     public var animations: [String]
     
     /// - description: Set the current time of each animation.
-    public var currentTime: JsonNumber
+    public var currentTime: Int
     
-    public init(animations: [String], currentTime: JsonNumber) {
+    public init(animations: [String], currentTime: Int) {
       self.animations = animations
       self.currentTime = currentTime
     }
@@ -183,9 +183,9 @@ extension SwiftCDPDomains.Animation {
     public static let name = "setPlaybackRate"
     
     /// - description: Playback rate for animations on page
-    public var playbackRate: JsonNumber
+    public var playbackRate: Double
     
-    public init(playbackRate: JsonNumber) {
+    public init(playbackRate: Double) {
       self.playbackRate = playbackRate
     }
     
@@ -207,12 +207,12 @@ extension SwiftCDPDomains.Animation {
     public var animationId: String
     
     /// - description: Duration of the animation.
-    public var duration: JsonNumber
+    public var duration: Int
     
     /// - description: Delay of the animation.
-    public var delay: JsonNumber
+    public var delay: Int
     
-    public init(animationId: String, duration: JsonNumber, delay: JsonNumber) {
+    public init(animationId: String, duration: Int, delay: Int) {
       self.animationId = animationId
       self.duration = duration
       self.delay = delay

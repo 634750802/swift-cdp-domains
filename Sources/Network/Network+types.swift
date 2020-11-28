@@ -116,64 +116,64 @@ extension SwiftCDPDomains.Network {
   public struct ResourceTiming: Codable {
     /// - description: Timing's requestTime is a baseline in seconds, while the other numbers are ticks in
     /// milliseconds relatively to this requestTime.
-    public var requestTime: JsonNumber
+    public var requestTime: Int
     
     /// - description: Started resolving proxy.
-    public var proxyStart: JsonNumber
+    public var proxyStart: Int
     
     /// - description: Finished resolving proxy.
-    public var proxyEnd: JsonNumber
+    public var proxyEnd: Int
     
     /// - description: Started DNS address resolve.
-    public var dnsStart: JsonNumber
+    public var dnsStart: Int
     
     /// - description: Finished DNS address resolve.
-    public var dnsEnd: JsonNumber
+    public var dnsEnd: Int
     
     /// - description: Started connecting to the remote host.
-    public var connectStart: JsonNumber
+    public var connectStart: Int
     
     /// - description: Connected to the remote host.
-    public var connectEnd: JsonNumber
+    public var connectEnd: Int
     
     /// - description: Started SSL handshake.
-    public var sslStart: JsonNumber
+    public var sslStart: Int
     
     /// - description: Finished SSL handshake.
-    public var sslEnd: JsonNumber
+    public var sslEnd: Int
     
     /// - description: Started running ServiceWorker.
     /// - intention: This is an experimental property.
-    public var workerStart: JsonNumber
+    public var workerStart: Int
     
     /// - description: Finished Starting ServiceWorker.
     /// - intention: This is an experimental property.
-    public var workerReady: JsonNumber
+    public var workerReady: Int
     
     /// - description: Started fetch event.
     /// - intention: This is an experimental property.
-    public var workerFetchStart: JsonNumber
+    public var workerFetchStart: Int
     
     /// - description: Settled fetch event respondWith promise.
     /// - intention: This is an experimental property.
-    public var workerRespondWithSettled: JsonNumber
+    public var workerRespondWithSettled: Int
     
     /// - description: Started sending request.
-    public var sendStart: JsonNumber
+    public var sendStart: Int
     
     /// - description: Finished sending request.
-    public var sendEnd: JsonNumber
+    public var sendEnd: Int
     
     /// - description: Time the server started pushing request.
     /// - intention: This is an experimental property.
-    public var pushStart: JsonNumber
+    public var pushStart: Int
     
     /// - description: Time the server finished pushing request.
     /// - intention: This is an experimental property.
-    public var pushEnd: JsonNumber
+    public var pushEnd: Int
     
     /// - description: Finished receiving response headers.
-    public var receiveHeadersEnd: JsonNumber
+    public var receiveHeadersEnd: Int
     
   }
 }

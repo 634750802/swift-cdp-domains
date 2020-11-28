@@ -136,7 +136,7 @@ extension SwiftCDPDomains.Debugger {
   /// - description: Search match for resource.
   public struct SearchMatch: Codable {
     /// - description: Line number in resource content.
-    public var lineNumber: JsonNumber
+    public var lineNumber: Int
     
     /// - description: Line with match content.
     public var lineContent: String

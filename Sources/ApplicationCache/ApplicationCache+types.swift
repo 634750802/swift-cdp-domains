@@ -27,13 +27,13 @@ extension SwiftCDPDomains.ApplicationCache {
     public var manifestURL: String
     
     /// - description: Application cache size.
-    public var size: JsonNumber
+    public var size: Int
     
     /// - description: Application cache creation time.
-    public var creationTime: JsonNumber
+    public var creationTime: Int
     
     /// - description: Application cache update time.
-    public var updateTime: JsonNumber
+    public var updateTime: Int
     
     /// - description: Application cache resources.
     public var resources: [ApplicationCacheResource]

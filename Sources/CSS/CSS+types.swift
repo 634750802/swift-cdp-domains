@@ -138,19 +138,19 @@ extension SwiftCDPDomains.CSS {
     public var isConstructed: Bool
     
     /// - description: Line offset of the stylesheet within the resource (zero based).
-    public var startLine: JsonNumber
+    public var startLine: Int
     
     /// - description: Column offset of the stylesheet within the resource (zero based).
-    public var startColumn: JsonNumber
+    public var startColumn: Int
     
     /// - description: Size of the content (in characters).
-    public var length: JsonNumber
+    public var length: Int
     
     /// - description: Line offset of the end of the stylesheet within the resource (zero based).
-    public var endLine: JsonNumber
+    public var endLine: Int
     
     /// - description: Column offset of the end of the stylesheet within the resource (zero based).
-    public var endColumn: JsonNumber
+    public var endColumn: Int
     
   }
 }
@@ -188,10 +188,10 @@ extension SwiftCDPDomains.CSS {
     public var styleSheetId: StyleSheetId
     
     /// - description: Offset of the start of the rule (including selector) from the beginning of the stylesheet.
-    public var startOffset: JsonNumber
+    public var startOffset: Int
     
     /// - description: Offset of the end of the rule body from the beginning of the stylesheet.
-    public var endOffset: JsonNumber
+    public var endOffset: Int
     
     /// - description: Indicates whether the rule was actually used by some element in the page.
     public var used: Bool
@@ -358,7 +358,7 @@ extension SwiftCDPDomains.CSS {
     public var valueRange: SourceRange?
     
     /// - description: Computed length of media query expression (if applicable).
-    public var computedLength: JsonNumber?
+    public var computedLength: Int?
     
   }
 }
@@ -374,7 +374,7 @@ extension SwiftCDPDomains.CSS {
     public var isCustomFont: Bool
     
     /// - description: Amount of glyphs that were rendered with this font.
-    public var glyphCount: JsonNumber
+    public var glyphCount: Int
     
   }
 }

@@ -33,7 +33,7 @@ extension SwiftCDPDomains.HeapProfiler {
     
     public var lastSeenObjectId: Int
     
-    public var timestamp: JsonNumber
+    public var timestamp: Int
     
   }
 }

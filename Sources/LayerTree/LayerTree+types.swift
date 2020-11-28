@@ -77,7 +77,7 @@ extension SwiftCDPDomains.LayerTree {
     public var x: JsonNumber
     
     /// - description: Offset from owning layer top boundary
-    public var y: JsonNumber
+    public var y: Int
     
     /// - description: Base64-encoded snapshot data.
     public var picture: String
@@ -99,28 +99,28 @@ extension SwiftCDPDomains.LayerTree {
     public var backendNodeId: SwiftCDPDomains.DOM.BackendNodeId?
     
     /// - description: Offset from parent layer, X coordinate.
-    public var offsetX: JsonNumber
+    public var offsetX: Int
     
     /// - description: Offset from parent layer, Y coordinate.
-    public var offsetY: JsonNumber
+    public var offsetY: Int
     
     /// - description: Layer width.
-    public var width: JsonNumber
+    public var width: Int
     
     /// - description: Layer height.
-    public var height: JsonNumber
+    public var height: Int
     
     /// - description: Transformation matrix for layer, default is identity matrix
     public var transform: [JsonNumber]?
     
     /// - description: Transform anchor point X, absent if no transform specified
-    public var anchorX: JsonNumber?
+    public var anchorX: Int?
     
     /// - description: Transform anchor point Y, absent if no transform specified
-    public var anchorY: JsonNumber?
+    public var anchorY: Int?
     
     /// - description: Transform anchor point Z, absent if no transform specified
-    public var anchorZ: JsonNumber?
+    public var anchorZ: Int?
     
     /// - description: Indicates how many time this layer has painted.
     public var paintCount: Int

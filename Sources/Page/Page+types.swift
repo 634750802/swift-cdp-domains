@@ -203,22 +203,22 @@ extension SwiftCDPDomains.Page {
   /// - description: Screencast frame metadata.
   public struct ScreencastFrameMetadata: Codable {
     /// - description: Top offset in DIP.
-    public var offsetTop: JsonNumber
+    public var offsetTop: Int
     
     /// - description: Page scale factor.
-    public var pageScaleFactor: JsonNumber
+    public var pageScaleFactor: Double
     
     /// - description: Device screen width in DIP.
-    public var deviceWidth: JsonNumber
+    public var deviceWidth: Int
     
     /// - description: Device screen height in DIP.
-    public var deviceHeight: JsonNumber
+    public var deviceHeight: Int
     
     /// - description: Position of horizontal scroll in CSS pixels.
-    public var scrollOffsetX: JsonNumber
+    public var scrollOffsetX: Int
     
     /// - description: Position of vertical scroll in CSS pixels.
-    public var scrollOffsetY: JsonNumber
+    public var scrollOffsetY: Int
     
     /// - description: Frame swap timestamp.
     public var timestamp: SwiftCDPDomains.Network.TimeSinceEpoch?
@@ -286,28 +286,28 @@ extension SwiftCDPDomains.Page {
   /// - description: Visual viewport position, dimensions, and scale.
   public struct VisualViewport: Codable {
     /// - description: Horizontal offset relative to the layout viewport (CSS pixels).
-    public var offsetX: JsonNumber
+    public var offsetX: Int
     
     /// - description: Vertical offset relative to the layout viewport (CSS pixels).
-    public var offsetY: JsonNumber
+    public var offsetY: Int
     
     /// - description: Horizontal offset relative to the document (CSS pixels).
-    public var pageX: JsonNumber
+    public var pageX: Int
     
     /// - description: Vertical offset relative to the document (CSS pixels).
-    public var pageY: JsonNumber
+    public var pageY: Int
     
     /// - description: Width (CSS pixels), excludes scrollbar if present.
-    public var clientWidth: JsonNumber
+    public var clientWidth: Int
     
     /// - description: Height (CSS pixels), excludes scrollbar if present.
-    public var clientHeight: JsonNumber
+    public var clientHeight: Int
     
     /// - description: Scale relative to the ideal viewport (size at width=device-width).
-    public var scale: JsonNumber
+    public var scale: Double
     
     /// - description: Page zoom factor (CSS to device independent pixels ratio).
-    public var zoom: JsonNumber?
+    public var zoom: Double?
     
   }
 }
@@ -317,19 +317,19 @@ extension SwiftCDPDomains.Page {
   /// - description: Viewport for capturing screenshot.
   public struct Viewport: Codable {
     /// - description: X offset in device independent pixels (dip).
-    public var x: JsonNumber
+    public var x: Int
     
     /// - description: Y offset in device independent pixels (dip).
-    public var y: JsonNumber
+    public var y: Int
     
     /// - description: Rectangle width in device independent pixels (dip).
-    public var width: JsonNumber
+    public var width: Int
     
     /// - description: Rectangle height in device independent pixels (dip).
-    public var height: JsonNumber
+    public var height: Int
     
     /// - description: Page scale factor.
-    public var scale: JsonNumber
+    public var scale: Double
     
   }
 }

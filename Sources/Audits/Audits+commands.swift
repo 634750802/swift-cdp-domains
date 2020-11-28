@@ -17,12 +17,12 @@ extension SwiftCDPDomains.Audits {
     public var encoding: String
     
     /// - description: The quality of the encoding (0-1). (defaults to 1)
-    public var quality: JsonNumber?
+    public var quality: Double?
     
     /// - description: Whether to only return the size information (defaults to false).
     public var sizeOnly: Bool?
     
-    public init(requestId: SwiftCDPDomains.Network.RequestId, encoding: String, quality: JsonNumber? = nil, sizeOnly: Bool? = nil) {
+    public init(requestId: SwiftCDPDomains.Network.RequestId, encoding: String, quality: Double? = nil, sizeOnly: Bool? = nil) {
       self.requestId = requestId
       self.encoding = encoding
       self.quality = quality
