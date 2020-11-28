@@ -4,6 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Input"
 
 extension SwiftCDPDomains.Input {
+  /// - description: Dispatches a key event to the page.
   public struct dispatchKeyEvent: ModelMethod {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "dispatchKeyEvent"
@@ -88,6 +89,9 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: This method emulates inserting text that doesn't come from a key press,
+  /// for example an emoji keyboard or an IME.
+  /// - intention: This is an experimental property.
   public struct insertText: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "insertText"
@@ -108,6 +112,7 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Dispatches a mouse event to the page.
   public struct dispatchMouseEvent: ModelMethod {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "dispatchMouseEvent"
@@ -196,6 +201,7 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Dispatches a touch event to the page.
   public struct dispatchTouchEvent: ModelMethod {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "dispatchTouchEvent"
@@ -232,6 +238,8 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Emulates touch event from the mouse event parameters.
+  /// - intention: This is an experimental property.
   public struct emulateTouchFromMouseEvent: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "emulateTouchFromMouseEvent"
@@ -285,6 +293,7 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Ignores input events (useful while auditing page).
   public struct setIgnoreInputEvents: ModelMethod {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "setIgnoreInputEvents"
@@ -305,6 +314,8 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Synthesizes a pinch gesture over a time period by issuing appropriate touch events.
+  /// - intention: This is an experimental property.
   public struct synthesizePinchGesture: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "synthesizePinchGesture"
@@ -342,6 +353,8 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Synthesizes a scroll gesture over a time period by issuing appropriate touch events.
+  /// - intention: This is an experimental property.
   public struct synthesizeScrollGesture: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "synthesizeScrollGesture"
@@ -409,6 +422,8 @@ extension SwiftCDPDomains.Input {
 }
 
 extension SwiftCDPDomains.Input {
+  /// - description: Synthesizes a tap gesture over a time period by issuing appropriate touch events.
+  /// - intention: This is an experimental property.
   public struct synthesizeTapGesture: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Input
     public static let name = "synthesizeTapGesture"

@@ -4,6 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Performance"
 
 extension SwiftCDPDomains.Performance {
+  /// - description: Current values of the metrics.
   public struct metrics: ModelEvent {
     public typealias Model = SwiftCDPDomains.Performance
     

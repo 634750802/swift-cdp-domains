@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "ApplicationCache"
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
+  /// - description: Enables application cache domain notifications.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     public static let name = "enable"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.ApplicationCache {
 }
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
+  /// - description: Returns relevant application cache data for the document in given frame.
   public struct getApplicationCacheForFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     public static let name = "getApplicationCacheForFrame"
@@ -45,7 +45,8 @@ extension SwiftCDPDomains.ApplicationCache {
 }
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
+  /// - description: Returns array of frame identifiers with manifest urls for each frame containing a document
+  /// associated with some application cache.
   public struct getFramesWithManifests: ModelMethod {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     public static let name = "getFramesWithManifests"
@@ -66,7 +67,7 @@ extension SwiftCDPDomains.ApplicationCache {
 }
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
+  /// - description: Returns manifest URL for document in the given frame.
   public struct getManifestForFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     public static let name = "getManifestForFrame"

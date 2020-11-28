@@ -36,6 +36,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Collect coverage data for the current isolate. The coverage data may be incomplete due to
+  /// garbage collection.
   public struct getBestEffortCoverage: ModelMethod {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "getBestEffortCoverage"
@@ -55,6 +57,7 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
   public struct setSamplingInterval: ModelMethod {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "setSamplingInterval"
@@ -91,6 +94,9 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Enable precise code coverage. Coverage data for JavaScript executed before enabling precise code
+  /// coverage may be incomplete. Enabling prevents running optimized code and resets execution
+  /// counters.
   public struct startPreciseCoverage: ModelMethod {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "startPreciseCoverage"
@@ -122,6 +128,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Enable type profile.
+  /// - intention: This is an experimental property.
   public struct startTypeProfile: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "startTypeProfile"
@@ -157,6 +165,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Disable precise code coverage. Disabling releases unnecessary execution count records and allows
+  /// executing optimized code.
   public struct stopPreciseCoverage: ModelMethod {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "stopPreciseCoverage"
@@ -173,6 +183,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Disable type profile. Disabling releases type profile data collected so far.
+  /// - intention: This is an experimental property.
   public struct stopTypeProfile: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "stopTypeProfile"
@@ -189,6 +201,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Collect coverage data for the current isolate, and resets execution counters. Precise code
+  /// coverage needs to have started.
   public struct takePreciseCoverage: ModelMethod {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "takePreciseCoverage"
@@ -210,6 +224,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Collect type profile.
+  /// - intention: This is an experimental property.
   public struct takeTypeProfile: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "takeTypeProfile"
@@ -229,6 +245,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Enable counters collection.
+  /// - intention: This is an experimental property.
   public struct enableCounters: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "enableCounters"
@@ -245,6 +263,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Disable counters collection.
+  /// - intention: This is an experimental property.
   public struct disableCounters: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "disableCounters"
@@ -261,6 +281,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Retrieve counters.
+  /// - intention: This is an experimental property.
   public struct getCounters: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "getCounters"
@@ -280,6 +302,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Enable run time call stats collection.
+  /// - intention: This is an experimental property.
   public struct enableRuntimeCallStats: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "enableRuntimeCallStats"
@@ -296,6 +320,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Disable run time call stats collection.
+  /// - intention: This is an experimental property.
   public struct disableRuntimeCallStats: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "disableRuntimeCallStats"
@@ -312,6 +338,8 @@ extension SwiftCDPDomains.Profiler {
 }
 
 extension SwiftCDPDomains.Profiler {
+  /// - description: Retrieve run time call stats.
+  /// - intention: This is an experimental property.
   public struct getRuntimeCallStats: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Profiler
     public static let name = "getRuntimeCallStats"

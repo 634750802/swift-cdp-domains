@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Tracing"
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Stop trace events collection.
   public struct end: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tracing
     public static let name = "end"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Gets supported tracing categories.
   public struct getCategories: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tracing
     public static let name = "getCategories"
@@ -41,7 +41,7 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Record a clock sync marker in the trace.
   public struct recordClockSyncMarker: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tracing
     public static let name = "recordClockSyncMarker"
@@ -62,7 +62,7 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Request a global memory dump.
   public struct requestMemoryDump: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tracing
     public static let name = "requestMemoryDump"
@@ -92,7 +92,7 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Start trace events collection.
   public struct start: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tracing
     public static let name = "start"

@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "SystemInfo"
 
 extension SwiftCDPDomains.SystemInfo {
-  /// - description: The SystemInfo domain defines methods and events for querying low-level system information.
-  /// - intention: This is an experimental property.
+  /// - description: Returns information about the system.
   public struct getInfo: ModelMethod {
     public typealias Model = SwiftCDPDomains.SystemInfo
     public static let name = "getInfo"
@@ -34,8 +33,7 @@ extension SwiftCDPDomains.SystemInfo {
 }
 
 extension SwiftCDPDomains.SystemInfo {
-  /// - description: The SystemInfo domain defines methods and events for querying low-level system information.
-  /// - intention: This is an experimental property.
+  /// - description: Returns information about all running processes.
   public struct getProcessInfo: ModelMethod {
     public typealias Model = SwiftCDPDomains.SystemInfo
     public static let name = "getProcessInfo"

@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "HeapProfiler"
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct addHeapSnapshotChunk: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     
@@ -14,7 +13,7 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
+  /// - description: If heap objects tracking has been started then backend may send update for one or more fragments
   public struct heapStatsUpdate: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     
@@ -27,7 +26,9 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
+  /// - description: If heap objects tracking has been started then backend regularly sends a current value for last
+  /// seen object id and corresponding timestamp. If the were changes in the heap since last event
+  /// then one or more heapStatsUpdate events will be sent before a new lastSeenObjectId event.
   public struct lastSeenObjectId: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     
@@ -39,7 +40,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct reportHeapSnapshotProgress: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     
@@ -53,7 +53,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct resetProfiles: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     

@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "BackgroundService"
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Called when the recording state for the service has been updated.
   public struct recordingStateChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.BackgroundService
     
@@ -17,8 +16,8 @@ extension SwiftCDPDomains.BackgroundService {
 }
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Called with all existing backgroundServiceEvents when enabled, and all new
+  /// events afterwards if enabled and recording.
   public struct backgroundServiceEventReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.BackgroundService
     

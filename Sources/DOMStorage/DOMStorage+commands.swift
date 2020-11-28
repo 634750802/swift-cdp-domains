@@ -4,8 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "DOMStorage"
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct clear: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "clear"
@@ -25,8 +23,7 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
+  /// - description: Disables storage tracking, prevents storage events from being sent to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "disable"
@@ -43,8 +40,7 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
+  /// - description: Enables storage tracking, storage events will now be delivered to the client.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "enable"
@@ -61,8 +57,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct getDOMStorageItems: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "getDOMStorageItems"
@@ -84,8 +78,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct removeDOMStorageItem: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "removeDOMStorageItem"
@@ -108,8 +100,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct setDOMStorageItem: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMStorage
     public static let name = "setDOMStorageItem"

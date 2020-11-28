@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Animation"
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Disables animation domain notifications.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "disable"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Enables animation domain notifications.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "enable"
@@ -38,7 +38,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Returns the current time of the an animation.
   public struct getCurrentTime: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "getCurrentTime"
@@ -62,7 +62,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Gets the playback rate of the document timeline.
   public struct getPlaybackRate: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "getPlaybackRate"
@@ -82,7 +82,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Releases a set of animations to no longer be manipulated.
   public struct releaseAnimations: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "releaseAnimations"
@@ -103,7 +103,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Gets the remote object of the Animation.
   public struct resolveAnimation: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "resolveAnimation"
@@ -127,7 +127,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Seek a set of animations to a particular time within each animation.
   public struct seekAnimations: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "seekAnimations"
@@ -152,7 +152,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Sets the paused state of a set of animations.
   public struct setPaused: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "setPaused"
@@ -177,7 +177,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Sets the playback rate of the document timeline.
   public struct setPlaybackRate: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "setPlaybackRate"
@@ -198,7 +198,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Sets the timing of an animation node.
   public struct setTiming: ModelMethod {
     public typealias Model = SwiftCDPDomains.Animation
     public static let name = "setTiming"

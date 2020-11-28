@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Inspector"
 
 extension SwiftCDPDomains.Inspector {
-  /// - intention: This is an experimental property.
+  /// - description: Disables inspector domain notifications.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Inspector
     public static let name = "disable"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Inspector {
 }
 
 extension SwiftCDPDomains.Inspector {
-  /// - intention: This is an experimental property.
+  /// - description: Enables inspector domain notifications.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Inspector
     public static let name = "enable"

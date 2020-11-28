@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "IndexedDB"
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Clears all entries from an object store.
   public struct clearObjectStore: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "clearObjectStore"
@@ -33,7 +33,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Deletes a database.
   public struct deleteDatabase: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "deleteDatabase"
@@ -58,7 +58,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Delete a range of entries from an object store
   public struct deleteObjectStoreEntries: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "deleteObjectStoreEntries"
@@ -88,7 +88,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Disables events from backend.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "disable"
@@ -105,7 +105,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Enables events from backend.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "enable"
@@ -122,7 +122,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Requests data from object store or index.
   public struct requestData: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "requestData"
@@ -172,7 +172,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Gets metadata of an object store
   public struct getMetadata: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "getMetadata"
@@ -208,7 +208,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Requests database with given name in given frame.
   public struct requestDatabase: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "requestDatabase"
@@ -236,7 +236,7 @@ extension SwiftCDPDomains.IndexedDB {
 }
 
 extension SwiftCDPDomains.IndexedDB {
-  /// - intention: This is an experimental property.
+  /// - description: Requests database names for given security origin.
   public struct requestDatabaseNames: ModelMethod {
     public typealias Model = SwiftCDPDomains.IndexedDB
     public static let name = "requestDatabaseNames"

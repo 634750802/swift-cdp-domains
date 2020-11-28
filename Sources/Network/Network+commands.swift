@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Network"
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Tells whether clearing browser cache is supported.
   @available(*, deprecated)
   public struct canClearBrowserCache: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
@@ -26,8 +25,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Tells whether clearing browser cookies is supported.
   @available(*, deprecated)
   public struct canClearBrowserCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
@@ -48,8 +46,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Tells whether emulation of network conditions is supported.
   @available(*, deprecated)
   public struct canEmulateNetworkConditions: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
@@ -70,8 +67,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Clears browser cache.
   public struct clearBrowserCache: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "clearBrowserCache"
@@ -88,8 +84,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Clears browser cookies.
   public struct clearBrowserCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "clearBrowserCookies"
@@ -106,8 +101,12 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Response to Network.requestIntercepted which either modifies the request to continue with any
+  /// modifications, or blocks it, or completes it with the provided response bytes. If a network
+  /// fetch occurs as a result which encounters a redirect an additional Network.requestIntercepted
+  /// event will be sent with the same InterceptionId.
+  /// Deprecated, use Fetch.continueRequest, Fetch.fulfillRequest and Fetch.failRequest instead.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct continueInterceptedRequest: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
@@ -162,8 +161,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Deletes browser cookies with matching name and url or domain/path pair.
   public struct deleteCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "deleteCookies"
@@ -197,8 +195,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Disables network tracking, prevents network events from being sent to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "disable"
@@ -215,8 +212,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Activates emulation of network conditions.
   public struct emulateNetworkConditions: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "emulateNetworkConditions"
@@ -253,8 +249,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Enables network tracking, network events will now be delivered to the client.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "enable"
@@ -285,8 +280,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns all browser cookies. Depending on the backend support, will return detailed cookie
+  /// information in the `cookies` field.
   public struct getAllCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getAllCookies"
@@ -306,8 +301,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns the DER-encoded certificate.
+  /// - intention: This is an experimental property.
   public struct getCertificate: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getCertificate"
@@ -330,8 +325,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns all browser cookies for the current URL. Depending on the backend support, will return
+  /// detailed cookie information in the `cookies` field.
   public struct getCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getCookies"
@@ -357,8 +352,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns content served for the given request.
   public struct getResponseBody: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getResponseBody"
@@ -384,8 +378,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns post data sent with the request. Returns an error when no data was sent with the request.
   public struct getRequestPostData: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getRequestPostData"
@@ -409,8 +402,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns content served for the given currently intercepted request.
+  /// - intention: This is an experimental property.
   public struct getResponseBodyForInterception: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getResponseBodyForInterception"
@@ -436,8 +429,11 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns a handle to the stream representing the response body. Note that after this command,
+  /// the intercepted request can't be continued as is -- you either need to cancel it or to provide
+  /// the response body. The stream only supports sequential read, IO.read will fail if the position
+  /// is specified.
+  /// - intention: This is an experimental property.
   public struct takeResponseBodyForInterceptionAsStream: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "takeResponseBodyForInterceptionAsStream"
@@ -459,8 +455,10 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: This method sends a new XMLHttpRequest which is identical to the original one. The following
+  /// parameters should be identical: method, url, async, request body, extra headers, withCredentials
+  /// attribute, user, password.
+  /// - intention: This is an experimental property.
   public struct replayXHR: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "replayXHR"
@@ -481,8 +479,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Searches for given string in response content.
+  /// - intention: This is an experimental property.
   public struct searchInResponseBody: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "searchInResponseBody"
@@ -518,8 +516,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Blocks URLs from loading.
+  /// - intention: This is an experimental property.
   public struct setBlockedURLs: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setBlockedURLs"
@@ -540,8 +538,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Toggles ignoring of service worker for each request.
+  /// - intention: This is an experimental property.
   public struct setBypassServiceWorker: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setBypassServiceWorker"
@@ -562,8 +560,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Toggles ignoring cache for each request. If `true`, cache will not be used.
   public struct setCacheDisabled: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setCacheDisabled"
@@ -584,8 +581,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Sets a cookie with the given cookie data; may overwrite equivalent cookies if they exist.
   public struct setCookie: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setCookie"
@@ -647,8 +643,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Sets given cookies.
   public struct setCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setCookies"
@@ -669,8 +664,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: For testing.
+  /// - intention: This is an experimental property.
   public struct setDataSizeLimitsForTest: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setDataSizeLimitsForTest"
@@ -695,8 +690,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Specifies whether to always send extra HTTP headers with the requests from this page.
   public struct setExtraHTTPHeaders: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setExtraHTTPHeaders"
@@ -717,8 +711,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Specifies whether to attach a page script stack id in requests
+  /// - intention: This is an experimental property.
   public struct setAttachDebugStack: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setAttachDebugStack"
@@ -739,8 +733,9 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Sets the requests to intercept that match the provided patterns and optionally resource types.
+  /// Deprecated, please use Fetch.enable instead.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setRequestInterception: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
@@ -763,8 +758,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Allows overriding user agent with the given string.
   public struct setUserAgentOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "setUserAgentOverride"
@@ -798,8 +792,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Returns information about the COEP/COOP isolation status.
+  /// - intention: This is an experimental property.
   public struct getSecurityIsolationStatus: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "getSecurityIsolationStatus"
@@ -822,8 +816,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fetches the resource and returns the content.
+  /// - intention: This is an experimental property.
   public struct loadNetworkResource: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     public static let name = "loadNetworkResource"

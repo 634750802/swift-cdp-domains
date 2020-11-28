@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Debugger"
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Continues execution until specific location is reached.
   public struct continueToLocation: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "continueToLocation"
@@ -29,8 +28,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Disables debugger for given page.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "disable"
@@ -47,8 +45,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Enables debugger for the given page. Clients should not assume that the debugging has been
+  /// enabled until the result for this command is received.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "enable"
@@ -75,8 +73,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Evaluates expression on a given call frame.
   public struct evaluateOnCallFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "evaluateOnCallFrame"
@@ -139,8 +136,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Execute a Wasm Evaluator module on a given call frame.
+  /// - intention: This is an experimental property.
   public struct executeWasmEvaluator: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "executeWasmEvaluator"
@@ -175,8 +172,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Returns possible locations for breakpoint. scriptId in start and end range locations should be
+  /// the same.
   public struct getPossibleBreakpoints: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "getPossibleBreakpoints"
@@ -209,8 +206,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Returns source for the script with given id.
   public struct getScriptSource: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "getScriptSource"
@@ -236,8 +232,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: This command is deprecated. Use getScriptSource instead.
   @available(*, deprecated)
   public struct getWasmBytecode: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
@@ -262,8 +257,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Returns stack trace with given `stackTraceId`.
+  /// - intention: This is an experimental property.
   public struct getStackTrace: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "getStackTrace"
@@ -285,8 +280,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Stops on the next JavaScript statement.
   public struct pause: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "pause"
@@ -303,8 +297,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct pauseOnAsyncCall: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
@@ -326,8 +319,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Removes JavaScript breakpoint.
   public struct removeBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "removeBreakpoint"
@@ -347,8 +339,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Restarts particular call frame from the beginning.
   public struct restartFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "restartFrame"
@@ -377,8 +368,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Resumes JavaScript execution.
   public struct resume: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "resume"
@@ -403,8 +393,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Searches for given string in script content.
   public struct searchInContent: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "searchInContent"
@@ -440,8 +429,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Enables or disables async call stacks tracking.
   public struct setAsyncCallStackDepth: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setAsyncCallStackDepth"
@@ -463,8 +451,10 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Replace previous blackbox patterns with passed ones. Forces backend to skip stepping/pausing in
+  /// scripts with url matching one of the patterns. VM will try to leave blackboxed script by
+  /// performing 'step in' several times, finally resorting to 'step out' if unsuccessful.
+  /// - intention: This is an experimental property.
   public struct setBlackboxPatterns: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBlackboxPatterns"
@@ -485,8 +475,11 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Makes backend skip steps in the script in blackboxed ranges. VM will try leave blacklisted
+  /// scripts by performing 'step in' several times, finally resorting to 'step out' if unsuccessful.
+  /// Positions array contains positions where blackbox state is changed. First interval isn't
+  /// blackboxed. Array should be sorted.
+  /// - intention: This is an experimental property.
   public struct setBlackboxedRanges: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBlackboxedRanges"
@@ -510,8 +503,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Sets JavaScript breakpoint at a given location.
   public struct setBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBreakpoint"
@@ -542,8 +534,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Sets instrumentation breakpoint.
   public struct setInstrumentationBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setInstrumentationBreakpoint"
@@ -567,8 +558,10 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Sets JavaScript breakpoint at given location specified either by URL or URL regex. Once this
+  /// command is issued, all existing parsed scripts will have breakpoints resolved and returned in
+  /// `locations` property. Further matching script parsing will result in subsequent
+  /// `breakpointResolved` events issued. This logical breakpoint will survive page reloads.
   public struct setBreakpointByUrl: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBreakpointByUrl"
@@ -616,8 +609,10 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Sets JavaScript breakpoint before each call to the given function.
+  /// If another function was created from the same source as a given one,
+  /// calling it will also trigger the breakpoint.
+  /// - intention: This is an experimental property.
   public struct setBreakpointOnFunctionCall: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBreakpointOnFunctionCall"
@@ -646,8 +641,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Activates / deactivates all breakpoints on the page.
   public struct setBreakpointsActive: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setBreakpointsActive"
@@ -668,8 +662,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Defines pause on exceptions state. Can be set to stop on all exceptions, uncaught exceptions or
+  /// no exceptions. Initial pause on exceptions state is `none`.
   public struct setPauseOnExceptions: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setPauseOnExceptions"
@@ -690,8 +684,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Changes return value in top frame. Available only at return break position.
+  /// - intention: This is an experimental property.
   public struct setReturnValue: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setReturnValue"
@@ -712,8 +706,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Edits JavaScript source live.
   public struct setScriptSource: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setScriptSource"
@@ -755,8 +748,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Makes page not interrupt on any pauses (breakpoint, exception, dom exception etc).
   public struct setSkipAllPauses: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setSkipAllPauses"
@@ -777,8 +769,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Changes value of variable in a callframe. Object-based scopes are not supported and must be
+  /// mutated manually.
   public struct setVariableValue: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "setVariableValue"
@@ -812,8 +804,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Steps into the function call.
   public struct stepInto: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "stepInto"
@@ -841,8 +832,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Steps out of the function call.
   public struct stepOut: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "stepOut"
@@ -859,8 +849,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Steps over the statement.
   public struct stepOver: ModelMethod {
     public typealias Model = SwiftCDPDomains.Debugger
     public static let name = "stepOver"

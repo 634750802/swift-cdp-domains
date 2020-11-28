@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "ServiceWorker"
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct deliverPushMessage: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "deliverPushMessage"
@@ -30,7 +29,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "disable"
@@ -47,7 +45,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct dispatchSyncEvent: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "dispatchSyncEvent"
@@ -76,7 +73,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct dispatchPeriodicSyncEvent: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "dispatchPeriodicSyncEvent"
@@ -102,7 +98,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "enable"
@@ -119,7 +114,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct inspectWorker: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "inspectWorker"
@@ -139,7 +133,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct setForceUpdateOnPageLoad: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "setForceUpdateOnPageLoad"
@@ -159,7 +152,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct skipWaiting: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "skipWaiting"
@@ -179,7 +171,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct startWorker: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "startWorker"
@@ -199,7 +190,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct stopAllWorkers: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "stopAllWorkers"
@@ -216,7 +206,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct stopWorker: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "stopWorker"
@@ -236,7 +225,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct unregister: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "unregister"
@@ -256,7 +244,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct updateRegistration: ModelMethod {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     public static let name = "updateRegistration"

@@ -4,7 +4,10 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Security"
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: There is a certificate error. If overriding certificate errors is enabled, then it should be
+  /// handled with the `handleCertificateError` command. Note: this event does not fire if the
+  /// certificate error has been allowed internally. Only one client per target should override
+  /// certificate errors at the same time.
   @available(*, deprecated)
   public struct certificateError: ModelEvent {
     public typealias Model = SwiftCDPDomains.Security
@@ -22,7 +25,8 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: The security state of the page changed.
+  /// - intention: This is an experimental property.
   public struct visibleSecurityStateChanged: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Security
     
@@ -33,7 +37,7 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: The security state of the page changed.
   public struct securityStateChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.Security
     

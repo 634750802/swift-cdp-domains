@@ -4,9 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "WebAuthn"
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Enable the WebAuthn domain and start intercepting credential storage and
+  /// retrieval with a virtual authenticator.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "enable"
@@ -23,9 +22,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Disable the WebAuthn domain.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "disable"
@@ -42,9 +39,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Creates and adds a virtual authenticator.
   public struct addVirtualAuthenticator: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "addVirtualAuthenticator"
@@ -66,9 +61,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Removes the given authenticator.
   public struct removeVirtualAuthenticator: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "removeVirtualAuthenticator"
@@ -88,9 +81,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Adds the credential to the specified authenticator.
   public struct addCredential: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "addCredential"
@@ -113,9 +104,8 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Returns a single credential stored in the given virtual authenticator that
+  /// matches the credential ID.
   public struct getCredential: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "getCredential"
@@ -140,9 +130,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Returns all the credentials stored in the given virtual authenticator.
   public struct getCredentials: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "getCredentials"
@@ -164,9 +152,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Removes a credential from the authenticator.
   public struct removeCredential: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "removeCredential"
@@ -189,9 +175,7 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Clears all the credentials from the specified device.
   public struct clearCredentials: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "clearCredentials"
@@ -211,9 +195,8 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Sets whether User Verification succeeds or fails for an authenticator.
+  /// The default is true.
   public struct setUserVerified: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "setUserVerified"
@@ -236,9 +219,8 @@ extension SwiftCDPDomains.WebAuthn {
 }
 
 extension SwiftCDPDomains.WebAuthn {
-  /// - description: This domain allows configuring virtual authenticators to test the WebAuthn
-  /// API.
-  /// - intention: This is an experimental property.
+  /// - description: Sets whether tests of user presence will succeed immediately (if true) or fail to resolve (if false) for an authenticator.
+  /// The default is true.
   public struct setAutomaticPresenceSimulation: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAuthn
     public static let name = "setAutomaticPresenceSimulation"

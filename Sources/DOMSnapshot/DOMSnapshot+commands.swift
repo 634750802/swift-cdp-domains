@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "DOMSnapshot"
 
 extension SwiftCDPDomains.DOMSnapshot {
-  /// - description: This domain facilitates obtaining document snapshots with DOM, layout, and style information.
-  /// - intention: This is an experimental property.
+  /// - description: Disables DOM snapshot agent for the given page.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMSnapshot
     public static let name = "disable"
@@ -22,8 +21,7 @@ extension SwiftCDPDomains.DOMSnapshot {
 }
 
 extension SwiftCDPDomains.DOMSnapshot {
-  /// - description: This domain facilitates obtaining document snapshots with DOM, layout, and style information.
-  /// - intention: This is an experimental property.
+  /// - description: Enables DOM snapshot agent for the given page.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMSnapshot
     public static let name = "enable"
@@ -40,8 +38,10 @@ extension SwiftCDPDomains.DOMSnapshot {
 }
 
 extension SwiftCDPDomains.DOMSnapshot {
-  /// - description: This domain facilitates obtaining document snapshots with DOM, layout, and style information.
-  /// - intention: This is an experimental property.
+  /// - description: Returns a document snapshot, including the full DOM tree of the root node (including iframes,
+  /// template contents, and imported documents) in a flattened array, as well as layout and
+  /// white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
+  /// flattened.
   @available(*, deprecated)
   public struct getSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMSnapshot
@@ -82,8 +82,10 @@ extension SwiftCDPDomains.DOMSnapshot {
 }
 
 extension SwiftCDPDomains.DOMSnapshot {
-  /// - description: This domain facilitates obtaining document snapshots with DOM, layout, and style information.
-  /// - intention: This is an experimental property.
+  /// - description: Returns a document snapshot, including the full DOM tree of the root node (including iframes,
+  /// template contents, and imported documents) in a flattened array, as well as layout and
+  /// white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
+  /// flattened.
   public struct captureSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMSnapshot
     public static let name = "captureSnapshot"

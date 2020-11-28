@@ -4,13 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "CSS"
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Inserts a new rule with the given `ruleText` in a stylesheet with given `styleSheetId`, at the
+  /// position specified by `location`.
   public struct addRule: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "addRule"
@@ -42,13 +37,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns all class names from specified stylesheet.
   public struct collectClassNames: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "collectClassNames"
@@ -71,13 +60,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Creates a new special "via-inspector" stylesheet in the frame with given `frameId`.
   public struct createStyleSheet: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "createStyleSheet"
@@ -101,13 +84,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Disables the CSS agent for the given page.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "disable"
@@ -124,13 +101,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Enables the CSS agent for the given page. Clients should not assume that the CSS agent has been
+  /// enabled until the result of this command is received.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "enable"
@@ -147,13 +119,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Ensures that the given node will have specified pseudo-classes whenever its style is computed by
+  /// the browser.
   public struct forcePseudoState: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "forcePseudoState"
@@ -178,13 +145,6 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
   public struct getBackgroundColors: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getBackgroundColors"
@@ -217,13 +177,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns the computed style for a DOM node identified by `nodeId`.
   public struct getComputedStyleForNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getComputedStyleForNode"
@@ -246,13 +200,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns the styles defined inline (explicitly in the "style" attribute and implicitly, using DOM
+  /// attributes) for a DOM node identified by `nodeId`.
   public struct getInlineStylesForNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getInlineStylesForNode"
@@ -277,13 +226,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns requested styles for a DOM node identified by `nodeId`.
   public struct getMatchedStylesForNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getMatchedStylesForNode"
@@ -316,13 +259,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns all media queries parsed by the rendering engine.
   public struct getMediaQueries: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getMediaQueries"
@@ -341,13 +278,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Requests information about platform fonts which we used to render child TextNodes in the given
+  /// node.
   public struct getPlatformFontsForNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getPlatformFontsForNode"
@@ -370,13 +302,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Returns the current textual content for a stylesheet.
   public struct getStyleSheetText: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "getStyleSheetText"
@@ -399,12 +325,12 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
+  /// - description: Starts tracking the given computed styles for updates. The specified array of properties
+  /// replaces the one previously specified. Pass empty array to disable tracking.
+  /// Use takeComputedStyleUpdates to retrieve the list of nodes that had properties modified.
+  /// The changes to computed style properties are only tracked for nodes pushed to the front-end
+  /// by the DOM agent. If no changes to the tracked properties occur after the node has been pushed
+  /// to the front-end, no updates will be issued for the node.
   /// - intention: This is an experimental property.
   public struct trackComputedStyleUpdates: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.CSS
@@ -425,12 +351,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
+  /// - description: Polls the next batch of computed style updates.
   /// - intention: This is an experimental property.
   public struct takeComputedStyleUpdates: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.CSS
@@ -451,13 +372,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Find a rule with the given active property for the given node and set the new value for this
+  /// property
   public struct setEffectivePropertyValueForNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setEffectivePropertyValueForNode"
@@ -484,13 +400,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Modifies the keyframe rule key text.
   public struct setKeyframeKey: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setKeyframeKey"
@@ -519,13 +429,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Modifies the rule selector.
   public struct setMediaText: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setMediaText"
@@ -554,13 +458,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Modifies the rule selector.
   public struct setRuleSelector: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setRuleSelector"
@@ -589,13 +487,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Sets the new stylesheet text.
   public struct setStyleSheetText: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setStyleSheetText"
@@ -621,13 +513,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Applies specified style edits one after another in the given order.
   public struct setStyleTexts: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "setStyleTexts"
@@ -650,13 +536,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Enables the selector recording.
   public struct startRuleUsageTracking: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "startRuleUsageTracking"
@@ -673,13 +553,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Stop tracking rule usage and return the list of rules that were used since last call to
+  /// `takeCoverageDelta` (or since start of coverage instrumentation)
   public struct stopRuleUsageTracking: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "stopRuleUsageTracking"
@@ -698,13 +573,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Obtain list of rules that became used since last call to this method (or since start of coverage
+  /// instrumentation)
   public struct takeCoverageDelta: ModelMethod {
     public typealias Model = SwiftCDPDomains.CSS
     public static let name = "takeCoverageDelta"
@@ -725,12 +595,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
+  /// - description: Enables/disables rendering of local CSS fonts (enabled by default).
   /// - intention: This is an experimental property.
   public struct setLocalFontsEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.CSS

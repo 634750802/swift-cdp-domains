@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "ApplicationCache"
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
   public struct applicationCacheStatusUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     
@@ -21,7 +20,6 @@ extension SwiftCDPDomains.ApplicationCache {
 }
 
 extension SwiftCDPDomains.ApplicationCache {
-  /// - intention: This is an experimental property.
   public struct networkStateUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.ApplicationCache
     

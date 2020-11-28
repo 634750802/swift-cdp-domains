@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Security"
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: Disables tracking security state changes.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Security
     public static let name = "disable"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: Enables tracking security state changes.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Security
     public static let name = "enable"
@@ -38,7 +38,8 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: Enable/disable whether all certificate errors should be ignored.
+  /// - intention: This is an experimental property.
   public struct setIgnoreCertificateErrors: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Security
     public static let name = "setIgnoreCertificateErrors"
@@ -59,7 +60,7 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: Handles a certificate error that fired a certificateError event.
   @available(*, deprecated)
   public struct handleCertificateError: ModelMethod {
     public typealias Model = SwiftCDPDomains.Security
@@ -85,7 +86,8 @@ extension SwiftCDPDomains.Security {
 }
 
 extension SwiftCDPDomains.Security {
-  /// - description: Security
+  /// - description: Enable/disable overriding certificate errors. If enabled, all certificate error events need to
+  /// be handled by the DevTools client and should be answered with `handleCertificateError` commands.
   @available(*, deprecated)
   public struct setOverrideCertificateErrors: ModelMethod {
     public typealias Model = SwiftCDPDomains.Security

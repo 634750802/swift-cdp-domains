@@ -4,9 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Cast"
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: This is fired whenever the list of available sinks changes. A sink is a
+  /// device or a software surface that you can cast to.
   public struct sinksUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Cast
     
@@ -16,9 +15,8 @@ extension SwiftCDPDomains.Cast {
 }
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: This is fired whenever the outstanding issue/error message changes.
+  /// |issueMessage| is empty if there is no issue.
   public struct issueUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Cast
     

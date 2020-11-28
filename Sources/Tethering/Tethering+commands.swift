@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Tethering"
 
 extension SwiftCDPDomains.Tethering {
-  /// - description: The Tethering domain defines methods and events for browser port binding.
-  /// - intention: This is an experimental property.
+  /// - description: Request browser port binding.
   public struct bind: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tethering
     public static let name = "bind"
@@ -26,8 +25,7 @@ extension SwiftCDPDomains.Tethering {
 }
 
 extension SwiftCDPDomains.Tethering {
-  /// - description: The Tethering domain defines methods and events for browser port binding.
-  /// - intention: This is an experimental property.
+  /// - description: Request browser port unbinding.
   public struct unbind: ModelMethod {
     public typealias Model = SwiftCDPDomains.Tethering
     public static let name = "unbind"

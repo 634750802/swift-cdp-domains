@@ -4,6 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Performance"
 
 extension SwiftCDPDomains.Performance {
+  /// - description: Disable collecting and reporting metrics.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Performance
     public static let name = "disable"
@@ -20,6 +21,7 @@ extension SwiftCDPDomains.Performance {
 }
 
 extension SwiftCDPDomains.Performance {
+  /// - description: Enable collecting and reporting metrics.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Performance
     public static let name = "enable"
@@ -40,6 +42,10 @@ extension SwiftCDPDomains.Performance {
 }
 
 extension SwiftCDPDomains.Performance {
+  /// - description: Sets time domain to use for collecting and reporting duration metrics.
+  /// Note that this must be called before enabling metrics collection. Calling
+  /// this method while metrics collection is enabled returns an error.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setTimeDomain: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Performance
@@ -61,6 +67,7 @@ extension SwiftCDPDomains.Performance {
 }
 
 extension SwiftCDPDomains.Performance {
+  /// - description: Retrieve current values of run-time metrics.
   public struct getMetrics: ModelMethod {
     public typealias Model = SwiftCDPDomains.Performance
     public static let name = "getMetrics"

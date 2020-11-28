@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Emulation"
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Tells whether emulation is supported.
   public struct canEmulate: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "canEmulate"
@@ -24,7 +24,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Clears the overriden device metrics.
   public struct clearDeviceMetricsOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "clearDeviceMetricsOverride"
@@ -41,7 +41,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Clears the overriden Geolocation Position and Error.
   public struct clearGeolocationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "clearGeolocationOverride"
@@ -58,7 +58,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Requests that page scale factor is reset to initial values.
+  /// - intention: This is an experimental property.
   public struct resetPageScaleFactor: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "resetPageScaleFactor"
@@ -75,7 +76,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Enables or disables simulating a focused and active page.
+  /// - intention: This is an experimental property.
   public struct setFocusEmulationEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setFocusEmulationEnabled"
@@ -96,7 +98,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Enables CPU throttling to emulate slow CPUs.
+  /// - intention: This is an experimental property.
   public struct setCPUThrottlingRate: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setCPUThrottlingRate"
@@ -117,7 +120,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Sets or clears an override of the default background color of the frame. This override is used
+  /// if the content does not specify one.
   public struct setDefaultBackgroundColorOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setDefaultBackgroundColorOverride"
@@ -139,7 +143,9 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+  /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+  /// query results).
   public struct setDeviceMetricsOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setDeviceMetricsOverride"
@@ -219,7 +225,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - intention: This is an experimental property.
   public struct setScrollbarsHidden: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setScrollbarsHidden"
@@ -240,7 +246,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - intention: This is an experimental property.
   public struct setDocumentCookieDisabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setDocumentCookieDisabled"
@@ -261,7 +267,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - intention: This is an experimental property.
   public struct setEmitTouchEventsForMouse: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setEmitTouchEventsForMouse"
@@ -286,7 +292,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Emulates the given media type or media feature for CSS media queries.
   public struct setEmulatedMedia: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setEmulatedMedia"
@@ -311,7 +317,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Emulates the given vision deficiency.
+  /// - intention: This is an experimental property.
   public struct setEmulatedVisionDeficiency: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setEmulatedVisionDeficiency"
@@ -332,7 +339,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+  /// unavailable.
   public struct setGeolocationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setGeolocationOverride"
@@ -361,7 +369,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides the Idle state.
+  /// - intention: This is an experimental property.
   public struct setIdleOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setIdleOverride"
@@ -386,7 +395,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Clears Idle state overrides.
+  /// - intention: This is an experimental property.
   public struct clearIdleOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "clearIdleOverride"
@@ -403,7 +413,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides value returned by the javascript navigator object.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setNavigatorOverrides: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
@@ -425,7 +436,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Sets a specified page scale factor.
+  /// - intention: This is an experimental property.
   public struct setPageScaleFactor: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setPageScaleFactor"
@@ -446,7 +458,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Switches script execution in the page.
   public struct setScriptExecutionDisabled: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setScriptExecutionDisabled"
@@ -467,7 +479,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Enables touch on platforms which do not support them.
   public struct setTouchEmulationEnabled: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setTouchEmulationEnabled"
@@ -492,7 +504,9 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Turns on virtual time for all frames (replacing real-time with a synthetic time source) and sets
+  /// the current virtual time policy.  Note this supersedes any previous time budget.
+  /// - intention: This is an experimental property.
   public struct setVirtualTimePolicy: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setVirtualTimePolicy"
@@ -534,7 +548,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides default host system locale with the specified one.
+  /// - intention: This is an experimental property.
   public struct setLocaleOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setLocaleOverride"
@@ -556,7 +571,8 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Overrides default host system timezone with the specified one.
+  /// - intention: This is an experimental property.
   public struct setTimezoneOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setTimezoneOverride"
@@ -578,7 +594,10 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Resizes the frame/viewport of the page. Note that this does not affect the frame's container
+  /// (e.g. browser window). Can be used to produce screenshots of the specified size. Not supported
+  /// on Android.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setVisibleSize: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
@@ -604,7 +623,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - intention: This is an experimental property.
   public struct setDisabledImageTypes: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setDisabledImageTypes"
@@ -625,7 +644,7 @@ extension SwiftCDPDomains.Emulation {
 }
 
 extension SwiftCDPDomains.Emulation {
-  /// - description: This domain emulates different environments for the page.
+  /// - description: Allows overriding user agent with the given string.
   public struct setUserAgentOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Emulation
     public static let name = "setUserAgentOverride"

@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "LayerTree"
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Provides the reasons why the given layer was composited.
   public struct compositingReasons: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "compositingReasons"
@@ -30,7 +30,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Disables compositing tree inspection.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "disable"
@@ -47,7 +47,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Enables compositing tree inspection.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "enable"
@@ -64,7 +64,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Returns the snapshot identifier.
   public struct loadSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "loadSnapshot"
@@ -88,7 +88,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Returns the layer snapshot identifier.
   public struct makeSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "makeSnapshot"
@@ -112,7 +112,6 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
   public struct profileSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "profileSnapshot"
@@ -148,7 +147,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Releases layer snapshot captured by the back-end.
   public struct releaseSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "releaseSnapshot"
@@ -169,7 +168,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Replays the layer snapshot and returns the resulting bitmap.
   public struct replaySnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "replaySnapshot"
@@ -205,7 +204,7 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
+  /// - description: Replays the layer snapshot and returns canvas log.
   public struct snapshotCommandLog: ModelMethod {
     public typealias Model = SwiftCDPDomains.LayerTree
     public static let name = "snapshotCommandLog"

@@ -4,7 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Target"
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when attached to target because of auto-attach or `attachToTarget` command.
+  /// - intention: This is an experimental property.
   public struct attachedToTarget: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -19,7 +20,9 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when detached from target for any reason (including `detachFromTarget` command). Can be
+  /// issued multiple times per target if multiple sessions have been attached to it.
+  /// - intention: This is an experimental property.
   public struct detachedFromTarget: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -33,7 +36,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Notifies about a new protocol message received from the session (as reported in
+  /// `attachedToTarget` event).
   public struct receivedMessageFromTarget: ModelEvent {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -49,7 +53,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when a possible inspection target is created.
   public struct targetCreated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -59,7 +63,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when a target is destroyed.
   public struct targetDestroyed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -69,7 +73,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when a target has crashed.
   public struct targetCrashed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Target
     
@@ -85,7 +89,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Issued when some information about a target has changed. This only happens between
+  /// `targetCreated` and `targetDestroyed`.
   public struct targetInfoChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.Target
     

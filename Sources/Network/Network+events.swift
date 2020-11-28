@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Network"
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when data chunk was received over the network.
   public struct dataReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -25,8 +24,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when EventSource message is received.
   public struct eventSourceMessageReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -49,8 +47,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when HTTP request has failed to load.
   public struct loadingFailed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -79,8 +76,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when HTTP request has finished loading.
   public struct loadingFinished: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -101,8 +97,10 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Details of an intercepted HTTP request, which must be either allowed, blocked, modified or
+  /// mocked.
+  /// Deprecated, use Fetch.requestPaused instead.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct requestIntercepted: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
@@ -154,8 +152,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired if request ended up loading from cache.
   public struct requestServedFromCache: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -166,8 +163,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when page is about to send HTTP request.
   public struct requestWillBeSent: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -208,8 +204,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when resource loading priority is changed
+  /// - intention: This is an experimental property.
   public struct resourceChangedPriority: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -226,8 +222,8 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when a signed exchange was received over the network
+  /// - intention: This is an experimental property.
   public struct signedExchangeReceived: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -241,8 +237,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when HTTP response is available.
   public struct responseReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -268,8 +263,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket is closed.
   public struct webSocketClosed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -283,8 +277,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired upon WebSocket creation.
   public struct webSocketCreated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -301,8 +294,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket message error occurs.
   public struct webSocketFrameError: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -319,8 +311,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket message is received.
   public struct webSocketFrameReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -337,8 +328,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket message is sent.
   public struct webSocketFrameSent: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -355,8 +345,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket handshake response becomes available.
   public struct webSocketHandshakeResponseReceived: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -373,8 +362,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when WebSocket is about to initiate handshake.
   public struct webSocketWillSendHandshakeRequest: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -394,8 +382,7 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired upon WebTransport creation.
   public struct webTransportCreated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -412,8 +399,6 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
   public struct webTransportClosed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -424,8 +409,11 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when additional information about a requestWillBeSent event is available from the
+  /// network stack. Not every requestWillBeSent event will have an additional
+  /// requestWillBeSentExtraInfo fired for it, and there is no guarantee whether requestWillBeSent
+  /// or requestWillBeSentExtraInfo will be fired first for the same request.
+  /// - intention: This is an experimental property.
   public struct requestWillBeSentExtraInfo: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     
@@ -446,8 +434,10 @@ extension SwiftCDPDomains.Network {
 }
 
 extension SwiftCDPDomains.Network {
-  /// - description: Network domain allows tracking network activities of the page. It exposes information about http,
-  /// file, data and other requests and responses, their headers, bodies, timing, etc.
+  /// - description: Fired when additional information about a responseReceived event is available from the network
+  /// stack. Not every responseReceived event will have an additional responseReceivedExtraInfo for
+  /// it, and responseReceivedExtraInfo may be fired before or after responseReceived.
+  /// - intention: This is an experimental property.
   public struct responseReceivedExtraInfo: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Network
     

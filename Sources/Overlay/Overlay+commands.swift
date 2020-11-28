@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Overlay"
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Disables domain notifications.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "disable"
@@ -22,8 +21,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Enables domain notifications.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "enable"
@@ -40,8 +38,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: For testing.
   public struct getHighlightObjectForTest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "getHighlightObjectForTest"
@@ -81,8 +78,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: For Persistent Grid testing.
   public struct getGridHighlightObjectsForTest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "getGridHighlightObjectsForTest"
@@ -106,8 +102,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: For Source Order Viewer testing.
   public struct getSourceOrderHighlightObjectForTest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "getSourceOrderHighlightObjectForTest"
@@ -131,8 +126,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Hides any highlight.
   public struct hideHighlight: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "hideHighlight"
@@ -149,8 +143,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights owner element of the frame with given id.
   public struct highlightFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "highlightFrame"
@@ -179,8 +172,8 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights DOM node with given id or with the given JavaScript object wrapper. Either nodeId or
+  /// objectId must be specified.
   public struct highlightNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "highlightNode"
@@ -217,8 +210,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights given quad. Coordinates are absolute with respect to the main frame viewport.
   public struct highlightQuad: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "highlightQuad"
@@ -247,8 +239,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights given rectangle. Coordinates are absolute with respect to the main frame viewport.
   public struct highlightRect: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "highlightRect"
@@ -289,8 +280,8 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights the source order of the children of the DOM node with given id or with the given
+  /// JavaScript object wrapper. Either nodeId or objectId must be specified.
   public struct highlightSourceOrder: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "highlightSourceOrder"
@@ -323,8 +314,8 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Enters the 'inspect' mode. In this mode, elements that user is hovering over are highlighted.
+  /// Backend then generates 'inspectNodeRequested' event upon element selection.
   public struct setInspectMode: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setInspectMode"
@@ -350,8 +341,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlights owner element of all frames detected to be ads.
   public struct setShowAdHighlights: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowAdHighlights"
@@ -372,8 +362,6 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
   public struct setPausedInDebuggerMessage: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setPausedInDebuggerMessage"
@@ -394,8 +382,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows debug borders on layers
   public struct setShowDebugBorders: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowDebugBorders"
@@ -416,8 +403,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows the FPS counter
   public struct setShowFPSCounter: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowFPSCounter"
@@ -438,8 +424,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Highlight multiple elements with the CSS Grid overlay.
   public struct setShowGridOverlays: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowGridOverlays"
@@ -460,8 +445,6 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
   public struct setShowFlexOverlays: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowFlexOverlays"
@@ -482,8 +465,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows paint rectangles
   public struct setShowPaintRects: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowPaintRects"
@@ -504,8 +486,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows layout shift regions
   public struct setShowLayoutShiftRegions: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowLayoutShiftRegions"
@@ -526,8 +507,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows scroll bottleneck rects
   public struct setShowScrollBottleneckRects: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowScrollBottleneckRects"
@@ -548,8 +528,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Requests that backend shows hit-test borders on layers
   public struct setShowHitTestBorders: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowHitTestBorders"
@@ -570,8 +549,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Paints viewport size upon main frame resize.
   public struct setShowViewportSizeOnResize: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowViewportSizeOnResize"
@@ -592,8 +570,7 @@ extension SwiftCDPDomains.Overlay {
 }
 
 extension SwiftCDPDomains.Overlay {
-  /// - description: This domain provides various functionality related to drawing atop the inspected page.
-  /// - intention: This is an experimental property.
+  /// - description: Add a dual screen device hinge
   public struct setShowHinge: ModelMethod {
     public typealias Model = SwiftCDPDomains.Overlay
     public static let name = "setShowHinge"

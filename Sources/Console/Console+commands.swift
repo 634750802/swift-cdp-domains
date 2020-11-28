@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Console"
 
 extension SwiftCDPDomains.Console {
-  /// - description: This domain is deprecated - use Runtime or Log instead.
+  /// - description: Does nothing.
   public struct clearMessages: ModelMethod {
     public typealias Model = SwiftCDPDomains.Console
     public static let name = "clearMessages"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Console {
 }
 
 extension SwiftCDPDomains.Console {
-  /// - description: This domain is deprecated - use Runtime or Log instead.
+  /// - description: Disables console domain, prevents further console messages from being reported to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Console
     public static let name = "disable"
@@ -38,7 +38,8 @@ extension SwiftCDPDomains.Console {
 }
 
 extension SwiftCDPDomains.Console {
-  /// - description: This domain is deprecated - use Runtime or Log instead.
+  /// - description: Enables console domain, sends the messages collected so far to the client by means of the
+  /// `messageAdded` notification.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Console
     public static let name = "enable"

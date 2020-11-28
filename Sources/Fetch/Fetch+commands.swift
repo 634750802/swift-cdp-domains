@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Fetch"
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Disables the fetch domain.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "disable"
@@ -21,7 +21,8 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Enables issuing of requestPaused events. A request will be paused until client
+  /// calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "enable"
@@ -49,7 +50,7 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Causes the request to fail with specified reason.
   public struct failRequest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "failRequest"
@@ -74,7 +75,7 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Provides response to the request.
   public struct fulfillRequest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "fulfillRequest"
@@ -119,7 +120,7 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Continues the request, optionally modifying some of its parameters.
   public struct continueRequest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "continueRequest"
@@ -156,7 +157,7 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Continues a request supplying authChallengeResponse following authRequired event.
   public struct continueWithAuth: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "continueWithAuth"
@@ -181,7 +182,12 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Causes the body of the response to be received from the server and
+  /// returned as a single string. May only be issued for a request that
+  /// is paused in the Response stage and is mutually exclusive with
+  /// takeResponseBodyForInterceptionAsStream. Calling other methods that
+  /// affect the request or disabling fetch domain before body is received
+  /// results in an undefined behavior.
   public struct getResponseBody: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "getResponseBody"
@@ -207,7 +213,16 @@ extension SwiftCDPDomains.Fetch {
 }
 
 extension SwiftCDPDomains.Fetch {
-  /// - description: A domain for letting clients substitute browser's network layer with client code.
+  /// - description: Returns a handle to the stream representing the response body.
+  /// The request must be paused in the HeadersReceived stage.
+  /// Note that after this command the request can't be continued
+  /// as is -- client either needs to cancel it or to provide the
+  /// response body.
+  /// The stream only supports sequential read, IO.read will fail if the position
+  /// is specified.
+  /// This method is mutually exclusive with getResponseBody.
+  /// Calling other methods that affect the request or disabling fetch
+  /// domain before body is received results in an undefined behavior.
   public struct takeResponseBodyAsStream: ModelMethod {
     public typealias Model = SwiftCDPDomains.Fetch
     public static let name = "takeResponseBodyAsStream"

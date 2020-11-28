@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "DOMDebugger"
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Returns event listeners of the given object.
   public struct getEventListeners: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "getEventListeners"
@@ -39,8 +38,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Removes DOM breakpoint that was set using `setDOMBreakpoint`.
   public struct removeDOMBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "removeDOMBreakpoint"
@@ -65,8 +63,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Removes breakpoint on particular DOM event.
   public struct removeEventListenerBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "removeEventListenerBreakpoint"
@@ -92,8 +89,8 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Removes breakpoint on particular native event.
+  /// - intention: This is an experimental property.
   public struct removeInstrumentationBreakpoint: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "removeInstrumentationBreakpoint"
@@ -114,8 +111,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Removes breakpoint from XMLHttpRequest.
   public struct removeXHRBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "removeXHRBreakpoint"
@@ -136,8 +132,8 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Sets breakpoint on particular CSP violations.
+  /// - intention: This is an experimental property.
   public struct setBreakOnCSPViolation: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "setBreakOnCSPViolation"
@@ -158,8 +154,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Sets breakpoint on particular operation with DOM.
   public struct setDOMBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "setDOMBreakpoint"
@@ -184,8 +179,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Sets breakpoint on particular DOM event.
   public struct setEventListenerBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "setEventListenerBreakpoint"
@@ -212,8 +206,8 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Sets breakpoint on particular native event.
+  /// - intention: This is an experimental property.
   public struct setInstrumentationBreakpoint: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "setInstrumentationBreakpoint"
@@ -234,8 +228,7 @@ extension SwiftCDPDomains.DOMDebugger {
 }
 
 extension SwiftCDPDomains.DOMDebugger {
-  /// - description: DOM debugging allows setting breakpoints on particular DOM operations and events. JavaScript
-  /// execution will stop on these operations as if there was a regular breakpoint set.
+  /// - description: Sets breakpoint on XMLHttpRequest.
   public struct setXHRBreakpoint: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOMDebugger
     public static let name = "setXHRBreakpoint"

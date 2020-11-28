@@ -4,11 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Runtime"
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Notification is issued every time when binding is called.
+  /// - intention: This is an experimental property.
   public struct bindingCalled: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -23,11 +20,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when console API was called.
   public struct consoleAPICalled: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -58,11 +51,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when unhandled exception was revoked.
   public struct exceptionRevoked: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -76,11 +65,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when exception was thrown and unhandled.
   public struct exceptionThrown: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -93,11 +78,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when new execution context is created.
   public struct executionContextCreated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -108,11 +89,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when execution context is destroyed.
   public struct executionContextDestroyed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -123,11 +100,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when all executionContexts were cleared in browser
   public struct executionContextsCleared: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     
@@ -135,11 +108,8 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Issued when object should be inspected (for example, as a result of inspect() command line API
+  /// call).
   public struct inspectRequested: ModelEvent {
     public typealias Model = SwiftCDPDomains.Runtime
     

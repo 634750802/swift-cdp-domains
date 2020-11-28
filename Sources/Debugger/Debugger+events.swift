@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Debugger"
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Fired when breakpoint is resolved to an actual script and location.
   public struct breakpointResolved: ModelEvent {
     public typealias Model = SwiftCDPDomains.Debugger
     
@@ -19,8 +18,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Fired when the virtual machine stopped on breakpoint or exception or any other stop criteria.
   public struct paused: ModelEvent {
     public typealias Model = SwiftCDPDomains.Debugger
     
@@ -51,8 +49,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Fired when the virtual machine resumed execution.
   public struct resumed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Debugger
     
@@ -60,8 +57,7 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Fired when virtual machine fails to parse the script.
   public struct scriptFailedToParse: ModelEvent {
     public typealias Model = SwiftCDPDomains.Debugger
     
@@ -124,8 +120,8 @@ extension SwiftCDPDomains.Debugger {
 }
 
 extension SwiftCDPDomains.Debugger {
-  /// - description: Debugger domain exposes JavaScript debugging capabilities. It allows setting and removing
-  /// breakpoints, stepping through execution, exploring stack traces, etc.
+  /// - description: Fired when virtual machine parses script. This event is also fired for all known and uncollected
+  /// scripts upon enabling debugger.
   public struct scriptParsed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Debugger
     

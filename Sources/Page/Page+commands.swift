@@ -4,7 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Page"
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Deprecated, please use addScriptToEvaluateOnNewDocument instead.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct addScriptToEvaluateOnLoad: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -28,7 +29,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Evaluates given script in every frame upon creation (before loading frame's scripts).
   public struct addScriptToEvaluateOnNewDocument: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "addScriptToEvaluateOnNewDocument"
@@ -58,7 +59,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Brings page to front (activates tab).
   public struct bringToFront: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "bringToFront"
@@ -75,7 +76,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Capture page screenshot.
   public struct captureScreenshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "captureScreenshot"
@@ -117,7 +118,9 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns a snapshot of the page as a string. For MHTML format, the serialization includes
+  /// iframes, shadow DOM, external resources, and element-inline styles.
+  /// - intention: This is an experimental property.
   public struct captureSnapshot: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "captureSnapshot"
@@ -141,7 +144,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Clears the overriden device metrics.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct clearDeviceMetricsOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -159,7 +163,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Clears the overridden Device Orientation.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct clearDeviceOrientationOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -177,7 +182,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Clears the overriden Geolocation Position and Error.
   @available(*, deprecated)
   public struct clearGeolocationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
@@ -195,7 +200,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Creates an isolated world for the given frame.
   public struct createIsolatedWorld: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "createIsolatedWorld"
@@ -228,7 +233,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Deletes browser cookie with given name, domain and path.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct deleteCookie: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -254,7 +260,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Disables page domain notifications.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "disable"
@@ -271,7 +277,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Enables page domain notifications.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "enable"
@@ -288,7 +294,6 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
   public struct getAppManifest: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getAppManifest"
@@ -314,7 +319,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - intention: This is an experimental property.
   public struct getInstallabilityErrors: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getInstallabilityErrors"
@@ -333,7 +338,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - intention: This is an experimental property.
   public struct getManifestIcons: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getManifestIcons"
@@ -352,7 +357,9 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns all browser cookies. Depending on the backend support, will return detailed cookie
+  /// information in the `cookies` field.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct getCookies: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -373,7 +380,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns present frame tree structure.
   public struct getFrameTree: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getFrameTree"
@@ -393,7 +400,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns metrics relating to the layouting of the page, such as viewport bounds/scale.
   public struct getLayoutMetrics: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getLayoutMetrics"
@@ -417,7 +424,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns navigation history for the current page.
   public struct getNavigationHistory: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getNavigationHistory"
@@ -439,7 +446,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Resets navigation history for the current page.
   public struct resetNavigationHistory: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "resetNavigationHistory"
@@ -456,7 +463,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns content of the given resource.
+  /// - intention: This is an experimental property.
   public struct getResourceContent: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getResourceContent"
@@ -486,7 +494,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Returns present frame / resource tree structure.
+  /// - intention: This is an experimental property.
   public struct getResourceTree: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "getResourceTree"
@@ -506,7 +515,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Accepts or dismisses a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload).
   public struct handleJavaScriptDialog: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "handleJavaScriptDialog"
@@ -532,7 +541,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Navigates current page to the given URL.
   public struct navigate: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "navigate"
@@ -577,7 +586,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Navigates current page to the given history entry.
   public struct navigateToHistoryEntry: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "navigateToHistoryEntry"
@@ -598,7 +607,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Print page as PDF.
   public struct printToPDF: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "printToPDF"
@@ -696,7 +705,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Reloads given page optionally ignoring the cache.
   public struct reload: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "reload"
@@ -722,7 +731,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Deprecated, please use removeScriptToEvaluateOnNewDocument instead.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct removeScriptToEvaluateOnLoad: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -743,7 +753,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Removes given script from the list.
   public struct removeScriptToEvaluateOnNewDocument: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "removeScriptToEvaluateOnNewDocument"
@@ -763,7 +773,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Acknowledges that a screencast frame has been received by the frontend.
+  /// - intention: This is an experimental property.
   public struct screencastFrameAck: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "screencastFrameAck"
@@ -784,7 +795,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Searches for given string in resource content.
+  /// - intention: This is an experimental property.
   public struct searchInResource: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "searchInResource"
@@ -824,7 +836,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Enable Chrome's experimental ad filter on all sites.
+  /// - intention: This is an experimental property.
   public struct setAdBlockingEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setAdBlockingEnabled"
@@ -845,7 +858,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Enable page Content Security Policy by-passing.
+  /// - intention: This is an experimental property.
   public struct setBypassCSP: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setBypassCSP"
@@ -866,7 +880,10 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Overrides the values of device screen dimensions (window.screen.width, window.screen.height,
+  /// window.innerWidth, window.innerHeight, and "device-width"/"device-height"-related CSS media
+  /// query results).
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setDeviceMetricsOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -933,7 +950,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Overrides the Device Orientation.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setDeviceOrientationOverride: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -963,7 +981,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Set generic font families.
+  /// - intention: This is an experimental property.
   public struct setFontFamilies: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setFontFamilies"
@@ -984,7 +1003,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Set default font sizes.
+  /// - intention: This is an experimental property.
   public struct setFontSizes: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setFontSizes"
@@ -1005,7 +1025,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Sets given markup as the document's HTML.
   public struct setDocumentContent: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setDocumentContent"
@@ -1030,7 +1050,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Set the behavior when downloading a file.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setDownloadBehavior: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -1057,7 +1078,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Overrides the Geolocation Position or Error. Omitting any of the parameters emulates position
+  /// unavailable.
   @available(*, deprecated)
   public struct setGeolocationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
@@ -1087,7 +1109,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Controls whether page will emit lifecycle events.
+  /// - intention: This is an experimental property.
   public struct setLifecycleEventsEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setLifecycleEventsEnabled"
@@ -1108,7 +1131,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Toggles mouse event-based touch event emulation.
+  /// - intention: This is an experimental property.
   @available(*, deprecated)
   public struct setTouchEmulationEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
@@ -1134,7 +1158,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Starts sending each frame using the `screencastFrame` event.
+  /// - intention: This is an experimental property.
   public struct startScreencast: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "startScreencast"
@@ -1171,7 +1196,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Force the page stop all navigations and pending resource fetches.
   public struct stopLoading: ModelMethod {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "stopLoading"
@@ -1188,7 +1213,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Crashes renderer on the IO thread, generates minidumps.
+  /// - intention: This is an experimental property.
   public struct crash: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "crash"
@@ -1205,7 +1231,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Tries to close page, running its beforeunload hooks, if any.
+  /// - intention: This is an experimental property.
   public struct close: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "close"
@@ -1222,7 +1249,10 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Tries to update the web lifecycle state of the page.
+  /// It will transition the page to the given state according to:
+  /// https://github.com/WICG/web-lifecycle/
+  /// - intention: This is an experimental property.
   public struct setWebLifecycleState: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setWebLifecycleState"
@@ -1243,7 +1273,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Stops sending each frame in the `screencastFrame`.
+  /// - intention: This is an experimental property.
   public struct stopScreencast: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "stopScreencast"
@@ -1260,7 +1291,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Forces compilation cache to be generated for every subresource script.
+  /// - intention: This is an experimental property.
   public struct setProduceCompilationCache: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setProduceCompilationCache"
@@ -1280,7 +1312,9 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Seeds compilation cache for given url. Compilation cache does not survive
+  /// cross-process navigation.
+  /// - intention: This is an experimental property.
   public struct addCompilationCache: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "addCompilationCache"
@@ -1304,7 +1338,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Clears seeded compilation cache.
+  /// - intention: This is an experimental property.
   public struct clearCompilationCache: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "clearCompilationCache"
@@ -1321,7 +1356,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Generates a report for testing.
+  /// - intention: This is an experimental property.
   public struct generateTestReport: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "generateTestReport"
@@ -1346,7 +1382,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Pauses page execution. Can be resumed using generic Runtime.runIfWaitingForDebugger.
+  /// - intention: This is an experimental property.
   public struct waitForDebugger: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "waitForDebugger"
@@ -1363,7 +1400,10 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Intercept file chooser requests and transfer control to protocol clients.
+  /// When file chooser interception is enabled, native file chooser dialog is not shown.
+  /// Instead, a protocol event `Page.fileChooserOpened` is emitted.
+  /// - intention: This is an experimental property.
   public struct setInterceptFileChooserDialog: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     public static let name = "setInterceptFileChooserDialog"

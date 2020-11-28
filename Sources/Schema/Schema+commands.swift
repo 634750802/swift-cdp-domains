@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Schema"
 
 extension SwiftCDPDomains.Schema {
-  /// - description: This domain is deprecated.
+  /// - description: Returns supported domains.
   public struct getDomains: ModelMethod {
     public typealias Model = SwiftCDPDomains.Schema
     public static let name = "getDomains"

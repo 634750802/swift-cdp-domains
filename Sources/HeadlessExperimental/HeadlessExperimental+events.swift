@@ -4,8 +4,9 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "HeadlessExperimental"
 
 extension SwiftCDPDomains.HeadlessExperimental {
-  /// - description: This domain provides experimental commands only supported in headless mode.
-  /// - intention: This is an experimental property.
+  /// - description: Issued when the target starts or stops needing BeginFrames.
+  /// Deprecated. Issue beginFrame unconditionally instead and use result from
+  /// beginFrame to detect whether the frames were suppressed.
   @available(*, deprecated)
   public struct needsBeginFramesChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.HeadlessExperimental

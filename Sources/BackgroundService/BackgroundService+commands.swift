@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "BackgroundService"
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Enables event updates for the service.
   public struct startObserving: ModelMethod {
     public typealias Model = SwiftCDPDomains.BackgroundService
     public static let name = "startObserving"
@@ -25,8 +24,7 @@ extension SwiftCDPDomains.BackgroundService {
 }
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Disables event updates for the service.
   public struct stopObserving: ModelMethod {
     public typealias Model = SwiftCDPDomains.BackgroundService
     public static let name = "stopObserving"
@@ -46,8 +44,7 @@ extension SwiftCDPDomains.BackgroundService {
 }
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Set the recording state for the service.
   public struct setRecording: ModelMethod {
     public typealias Model = SwiftCDPDomains.BackgroundService
     public static let name = "setRecording"
@@ -70,8 +67,7 @@ extension SwiftCDPDomains.BackgroundService {
 }
 
 extension SwiftCDPDomains.BackgroundService {
-  /// - description: Defines events for background web platform features.
-  /// - intention: This is an experimental property.
+  /// - description: Clears all stored data for the service.
   public struct clearEvents: ModelMethod {
     public typealias Model = SwiftCDPDomains.BackgroundService
     public static let name = "clearEvents"

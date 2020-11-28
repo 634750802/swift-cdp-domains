@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Tracing"
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
   public struct bufferUsage: ModelEvent {
     public typealias Model = SwiftCDPDomains.Tracing
     
@@ -23,7 +22,8 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Contains an bucket of collected trace events. When tracing is stopped collected events will be
+  /// send as a sequence of dataCollected events followed by tracingComplete event.
   public struct dataCollected: ModelEvent {
     public typealias Model = SwiftCDPDomains.Tracing
     
@@ -33,7 +33,8 @@ extension SwiftCDPDomains.Tracing {
 }
 
 extension SwiftCDPDomains.Tracing {
-  /// - intention: This is an experimental property.
+  /// - description: Signals that tracing is stopped and there is no trace buffers pending flush, all data were
+  /// delivered via dataCollected events.
   public struct tracingComplete: ModelEvent {
     public typealias Model = SwiftCDPDomains.Tracing
     

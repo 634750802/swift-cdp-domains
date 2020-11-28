@@ -4,8 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "DOMStorage"
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct domStorageItemAdded: ModelEvent {
     public typealias Model = SwiftCDPDomains.DOMStorage
     
@@ -19,8 +17,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct domStorageItemRemoved: ModelEvent {
     public typealias Model = SwiftCDPDomains.DOMStorage
     
@@ -32,8 +28,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct domStorageItemUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.DOMStorage
     
@@ -49,8 +43,6 @@ extension SwiftCDPDomains.DOMStorage {
 }
 
 extension SwiftCDPDomains.DOMStorage {
-  /// - description: Query and modify DOM storage.
-  /// - intention: This is an experimental property.
   public struct domStorageItemsCleared: ModelEvent {
     public typealias Model = SwiftCDPDomains.DOMStorage
     

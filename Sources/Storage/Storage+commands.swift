@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Storage"
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Clears storage for origin.
   public struct clearDataForOrigin: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "clearDataForOrigin"
@@ -29,7 +29,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Returns all browser cookies.
   public struct getCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "getCookies"
@@ -53,7 +53,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Sets given cookies.
   public struct setCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "setCookies"
@@ -78,7 +78,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Clears cookies.
   public struct clearCookies: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "clearCookies"
@@ -99,7 +99,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Returns usage and quota in bytes.
   public struct getUsageAndQuota: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "getUsageAndQuota"
@@ -129,6 +129,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
+  /// - description: Override quota for the specified origin
   /// - intention: This is an experimental property.
   public struct overrideQuotaForOrigin: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Storage
@@ -160,7 +161,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Registers origin to be notified when an update occurs to its cache storage list.
   public struct trackCacheStorageForOrigin: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "trackCacheStorageForOrigin"
@@ -181,7 +182,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Registers origin to be notified when an update occurs to its IndexedDB.
   public struct trackIndexedDBForOrigin: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "trackIndexedDBForOrigin"
@@ -202,7 +203,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Unregisters origin from receiving notifications for cache storage.
   public struct untrackCacheStorageForOrigin: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "untrackCacheStorageForOrigin"
@@ -223,7 +224,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: Unregisters origin from receiving notifications for IndexedDB.
   public struct untrackIndexedDBForOrigin: ModelMethod {
     public typealias Model = SwiftCDPDomains.Storage
     public static let name = "untrackIndexedDBForOrigin"

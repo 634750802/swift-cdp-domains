@@ -4,13 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "DOM"
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Collects class names for the node with given id and all of it's child nodes.
+  /// - intention: This is an experimental property.
   public struct collectClassNamesFromSubtree: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "collectClassNamesFromSubtree"
@@ -34,13 +29,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Creates a deep copy of the specified node and places it into the target container before the
+  /// given anchor.
+  /// - intention: This is an experimental property.
   public struct copyTo: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "copyTo"
@@ -73,13 +64,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Describes node given its id, does not require domain to be enabled. Does not start tracking any
+  /// objects, can be used for automation.
   public struct describeNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "describeNode"
@@ -121,13 +107,10 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Scrolls the specified rect of the given node into view if not already visible.
+  /// Note: exactly one between nodeId, backendNodeId and objectId should be passed
+  /// to identify the node.
+  /// - intention: This is an experimental property.
   public struct scrollIntoViewIfNeeded: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "scrollIntoViewIfNeeded"
@@ -161,13 +144,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Disables DOM agent for the given page.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "disable"
@@ -184,13 +161,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Discards search results from the session with the given id. `getSearchResults` should no longer
+  /// be called for that search.
+  /// - intention: This is an experimental property.
   public struct discardSearchResults: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "discardSearchResults"
@@ -211,13 +184,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Enables DOM agent for the given page.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "enable"
@@ -234,13 +201,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Focuses the given element.
   public struct focus: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "focus"
@@ -269,13 +230,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns attributes for the specified node.
   public struct getAttributes: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getAttributes"
@@ -299,13 +254,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns boxes for the given node.
   public struct getBoxModel: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getBoxModel"
@@ -337,13 +286,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns quads that describe node position on the page. This method
+  /// might return multiple quads for inline nodes.
+  /// - intention: This is an experimental property.
   public struct getContentQuads: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getContentQuads"
@@ -375,13 +320,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns the root DOM node (and optionally the subtree) to the caller.
   public struct getDocument: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getDocument"
@@ -411,13 +350,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns the root DOM node (and optionally the subtree) to the caller.
+  /// Deprecated, as it is not designed to work well with the rest of the DOM agent.
+  /// Use DOMSnapshot.captureSnapshot instead.
   @available(*, deprecated)
   public struct getFlattenedDocument: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
@@ -448,13 +383,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Finds nodes with a given computed style in a subtree.
+  /// - intention: This is an experimental property.
   public struct getNodesForSubtreeByStyle: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getNodesForSubtreeByStyle"
@@ -487,13 +417,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns node id at given location. Depending on whether DOM domain is enabled, nodeId is
+  /// either returned or not.
   public struct getNodeForLocation: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getNodeForLocation"
@@ -533,13 +458,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns node's HTML markup.
   public struct getOuterHTML: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getOuterHTML"
@@ -571,13 +490,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns the id of the nearest ancestor that is a relayout boundary.
+  /// - intention: This is an experimental property.
   public struct getRelayoutBoundary: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getRelayoutBoundary"
@@ -601,13 +515,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns search results from given `fromIndex` to given `toIndex` from the search with the given
+  /// identifier.
+  /// - intention: This is an experimental property.
   public struct getSearchResults: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getSearchResults"
@@ -639,13 +549,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Hides any highlight.
   public struct hideHighlight: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "hideHighlight"
@@ -662,13 +566,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Highlights DOM node.
   public struct highlightNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "highlightNode"
@@ -685,13 +583,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Highlights given rectangle.
   public struct highlightRect: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "highlightRect"
@@ -708,13 +600,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Marks last undoable state.
+  /// - intention: This is an experimental property.
   public struct markUndoableState: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "markUndoableState"
@@ -731,13 +618,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Moves node into the new container, places it before the given anchor.
   public struct moveTo: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "moveTo"
@@ -770,13 +651,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Searches for a given string in the DOM tree. Use `getSearchResults` to access search results or
+  /// `cancelSearch` to end this search session.
+  /// - intention: This is an experimental property.
   public struct performSearch: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "performSearch"
@@ -806,13 +683,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Requests that the node is sent to the caller given its path. // FIXME, use XPath
+  /// - intention: This is an experimental property.
   public struct pushNodeByPathToFrontend: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "pushNodeByPathToFrontend"
@@ -836,13 +708,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Requests that a batch of nodes is sent to the caller given their backend node ids.
+  /// - intention: This is an experimental property.
   public struct pushNodesByBackendIdsToFrontend: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "pushNodesByBackendIdsToFrontend"
@@ -867,13 +734,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Executes `querySelector` on a given node.
   public struct querySelector: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "querySelector"
@@ -901,13 +762,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Executes `querySelectorAll` on a given node.
   public struct querySelectorAll: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "querySelectorAll"
@@ -935,13 +790,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Re-does the last undone action.
+  /// - intention: This is an experimental property.
   public struct redo: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "redo"
@@ -958,13 +808,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Removes attribute with given name from an element with given id.
   public struct removeAttribute: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "removeAttribute"
@@ -989,13 +833,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Removes node with given id.
   public struct removeNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "removeNode"
@@ -1016,13 +854,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Requests that children of the node with given id are returned to the caller in form of
+  /// `setChildNodes` events where not only immediate children are retrieved, but all children down to
+  /// the specified depth.
   public struct requestChildNodes: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "requestChildNodes"
@@ -1053,13 +887,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Requests that the node is sent to the caller given the JavaScript node object reference. All
+  /// nodes that form the path from the node to the root are also sent to the client as a series of
+  /// `setChildNodes` notifications.
   public struct requestNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "requestNode"
@@ -1083,13 +913,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Resolves the JavaScript node object for a given NodeId or BackendNodeId.
   public struct resolveNode: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "resolveNode"
@@ -1125,13 +949,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets attribute for an element with given id.
   public struct setAttributeValue: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setAttributeValue"
@@ -1160,13 +978,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets attributes on element with given id. This method is useful when user edits some existing
+  /// attribute value and types in several attribute name/value pairs.
   public struct setAttributesAsText: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setAttributesAsText"
@@ -1196,13 +1009,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets files for the given file input element.
   public struct setFileInputFiles: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setFileInputFiles"
@@ -1235,13 +1042,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets if stack traces should be captured for Nodes. See `Node.getNodeStackTraces`. Default is disabled.
+  /// - intention: This is an experimental property.
   public struct setNodeStackTracesEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setNodeStackTracesEnabled"
@@ -1262,13 +1064,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Gets stack traces associated with a Node. As of now, only provides stack trace for Node creation.
+  /// - intention: This is an experimental property.
   public struct getNodeStackTraces: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getNodeStackTraces"
@@ -1292,13 +1089,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns file information for the given
+  /// File wrapper.
+  /// - intention: This is an experimental property.
   public struct getFileInfo: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getFileInfo"
@@ -1321,13 +1114,9 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Enables console to refer to the node with given id via $x (see Command Line API for more details
+  /// $x functions).
+  /// - intention: This is an experimental property.
   public struct setInspectedNode: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setInspectedNode"
@@ -1348,13 +1137,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets node name for a node with given id.
   public struct setNodeName: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setNodeName"
@@ -1382,13 +1165,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets node value for a node with given id.
   public struct setNodeValue: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setNodeValue"
@@ -1413,13 +1190,7 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Sets node HTML markup, returns new node id.
   public struct setOuterHTML: ModelMethod {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "setOuterHTML"
@@ -1444,13 +1215,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Undoes the last performed action.
+  /// - intention: This is an experimental property.
   public struct undo: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "undo"
@@ -1467,13 +1233,8 @@ extension SwiftCDPDomains.DOM {
 }
 
 extension SwiftCDPDomains.DOM {
-  /// - description: This domain exposes DOM read/write operations. Each DOM Node is represented with its mirror object
-  /// that has an `id`. This `id` can be used to get additional information on the Node, resolve it into
-  /// the JavaScript object wrapper, etc. It is important that client receives DOM events only for the
-  /// nodes that are known to the client. Backend keeps track of the nodes that were sent to the client
-  /// and never sends the same node twice. It is client's responsibility to collect information about
-  /// the nodes that were sent to the client.<p>Note that `iframe` owner elements will return
-  /// corresponding document elements as their child nodes.</p>
+  /// - description: Returns iframe node that owns iframe with the given domain.
+  /// - intention: This is an experimental property.
   public struct getFrameOwner: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.DOM
     public static let name = "getFrameOwner"

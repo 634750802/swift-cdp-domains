@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Memory"
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
   public struct getDOMCounters: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "getDOMCounters"
@@ -25,7 +24,6 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
   public struct prepareForLeakDetection: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "prepareForLeakDetection"
@@ -42,7 +40,7 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Simulate OomIntervention by purging V8 memory.
   public struct forciblyPurgeJavaScriptMemory: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "forciblyPurgeJavaScriptMemory"
@@ -59,7 +57,7 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Enable/disable suppressing memory pressure notifications in all processes.
   public struct setPressureNotificationsSuppressed: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "setPressureNotificationsSuppressed"
@@ -80,7 +78,7 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Simulate a memory pressure notification in all processes.
   public struct simulatePressureNotification: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "simulatePressureNotification"
@@ -101,7 +99,7 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Start collecting native memory profile.
   public struct startSampling: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "startSampling"
@@ -126,7 +124,7 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Stop collecting native memory profile.
   public struct stopSampling: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "stopSampling"
@@ -143,7 +141,8 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Retrieve native memory allocations profile
+  /// collected since renderer process startup.
   public struct getAllTimeSamplingProfile: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "getAllTimeSamplingProfile"
@@ -162,7 +161,8 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Retrieve native memory allocations profile
+  /// collected since browser process startup.
   public struct getBrowserSamplingProfile: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "getBrowserSamplingProfile"
@@ -181,7 +181,8 @@ extension SwiftCDPDomains.Memory {
 }
 
 extension SwiftCDPDomains.Memory {
-  /// - intention: This is an experimental property.
+  /// - description: Retrieve native memory allocations profile collected since last
+  /// `startSampling` call.
   public struct getSamplingProfile: ModelMethod {
     public typealias Model = SwiftCDPDomains.Memory
     public static let name = "getSamplingProfile"

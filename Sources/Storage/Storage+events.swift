@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Storage"
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: A cache's contents have been modified.
   public struct cacheStorageContentUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Storage
     
@@ -18,7 +18,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: A cache has been added/deleted.
   public struct cacheStorageListUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Storage
     
@@ -29,7 +29,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: The origin's IndexedDB object store has been modified.
   public struct indexedDBContentUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Storage
     
@@ -46,7 +46,7 @@ extension SwiftCDPDomains.Storage {
 }
 
 extension SwiftCDPDomains.Storage {
-  /// - intention: This is an experimental property.
+  /// - description: The origin's IndexedDB database list has been modified.
   public struct indexedDBListUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Storage
     

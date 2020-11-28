@@ -4,7 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "HeapProfiler"
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
+  /// - description: Enables console to refer to the node with given id via $x (see Command Line API for more details
+  /// $x functions).
   public struct addInspectedHeapObject: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "addInspectedHeapObject"
@@ -25,7 +26,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct collectGarbage: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "collectGarbage"
@@ -42,7 +42,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "disable"
@@ -59,7 +58,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "enable"
@@ -76,7 +74,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct getHeapObjectId: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "getHeapObjectId"
@@ -100,7 +97,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct getObjectByHeapObjectId: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "getObjectByHeapObjectId"
@@ -127,7 +123,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct getSamplingProfile: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "getSamplingProfile"
@@ -147,7 +142,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct startSampling: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "startSampling"
@@ -169,7 +163,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct startTrackingHeapObjects: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "startTrackingHeapObjects"
@@ -189,7 +182,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct stopSampling: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "stopSampling"
@@ -209,7 +201,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct stopTrackingHeapObjects: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "stopTrackingHeapObjects"
@@ -234,7 +225,6 @@ extension SwiftCDPDomains.HeapProfiler {
 }
 
 extension SwiftCDPDomains.HeapProfiler {
-  /// - intention: This is an experimental property.
   public struct takeHeapSnapshot: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeapProfiler
     public static let name = "takeHeapSnapshot"

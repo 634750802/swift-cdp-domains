@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Accessibility"
 
 extension SwiftCDPDomains.Accessibility {
-  /// - intention: This is an experimental property.
+  /// - description: Disables the accessibility domain.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Accessibility
     public static let name = "disable"
@@ -21,7 +21,8 @@ extension SwiftCDPDomains.Accessibility {
 }
 
 extension SwiftCDPDomains.Accessibility {
-  /// - intention: This is an experimental property.
+  /// - description: Enables the accessibility domain which causes `AXNodeId`s to remain consistent between method calls.
+  /// This turns on accessibility for the page, which can impact performance until accessibility is disabled.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Accessibility
     public static let name = "enable"
@@ -38,6 +39,7 @@ extension SwiftCDPDomains.Accessibility {
 }
 
 extension SwiftCDPDomains.Accessibility {
+  /// - description: Fetches the accessibility node and partial accessibility tree for this DOM node, if it exists.
   /// - intention: This is an experimental property.
   public struct getPartialAXTree: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Accessibility
@@ -75,6 +77,7 @@ extension SwiftCDPDomains.Accessibility {
 }
 
 extension SwiftCDPDomains.Accessibility {
+  /// - description: Fetches the entire accessibility tree
   /// - intention: This is an experimental property.
   public struct getFullAXTree: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Accessibility
@@ -94,6 +97,11 @@ extension SwiftCDPDomains.Accessibility {
 }
 
 extension SwiftCDPDomains.Accessibility {
+  /// - description: Query a DOM node's accessibility subtree for accessible name and role.
+  /// This command computes the name and role for all nodes in the subtree, including those that are
+  /// ignored for accessibility, and returns those that mactch the specified name and role. If no DOM
+  /// node is specified, or the DOM node does not exist, the command returns an error. If neither
+  /// `accessibleName` or `role` is specified, it returns all the accessibility nodes in the subtree.
   /// - intention: This is an experimental property.
   public struct queryAXTree: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Accessibility

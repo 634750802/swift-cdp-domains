@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Database"
 
 extension SwiftCDPDomains.Database {
-  /// - intention: This is an experimental property.
+  /// - description: Disables database tracking, prevents database events from being sent to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Database
     public static let name = "disable"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Database {
 }
 
 extension SwiftCDPDomains.Database {
-  /// - intention: This is an experimental property.
+  /// - description: Enables database tracking, database events will now be delivered to the client.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Database
     public static let name = "enable"
@@ -38,7 +38,6 @@ extension SwiftCDPDomains.Database {
 }
 
 extension SwiftCDPDomains.Database {
-  /// - intention: This is an experimental property.
   public struct executeSQL: ModelMethod {
     public typealias Model = SwiftCDPDomains.Database
     public static let name = "executeSQL"
@@ -65,7 +64,6 @@ extension SwiftCDPDomains.Database {
 }
 
 extension SwiftCDPDomains.Database {
-  /// - intention: This is an experimental property.
   public struct getDatabaseTableNames: ModelMethod {
     public typealias Model = SwiftCDPDomains.Database
     public static let name = "getDatabaseTableNames"

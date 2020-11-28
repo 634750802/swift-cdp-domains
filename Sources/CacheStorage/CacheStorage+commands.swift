@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "CacheStorage"
 
 extension SwiftCDPDomains.CacheStorage {
-  /// - intention: This is an experimental property.
+  /// - description: Deletes a cache.
   public struct deleteCache: ModelMethod {
     public typealias Model = SwiftCDPDomains.CacheStorage
     public static let name = "deleteCache"
@@ -25,7 +25,7 @@ extension SwiftCDPDomains.CacheStorage {
 }
 
 extension SwiftCDPDomains.CacheStorage {
-  /// - intention: This is an experimental property.
+  /// - description: Deletes a cache entry.
   public struct deleteEntry: ModelMethod {
     public typealias Model = SwiftCDPDomains.CacheStorage
     public static let name = "deleteEntry"
@@ -50,7 +50,7 @@ extension SwiftCDPDomains.CacheStorage {
 }
 
 extension SwiftCDPDomains.CacheStorage {
-  /// - intention: This is an experimental property.
+  /// - description: Requests cache names.
   public struct requestCacheNames: ModelMethod {
     public typealias Model = SwiftCDPDomains.CacheStorage
     public static let name = "requestCacheNames"
@@ -74,7 +74,7 @@ extension SwiftCDPDomains.CacheStorage {
 }
 
 extension SwiftCDPDomains.CacheStorage {
-  /// - intention: This is an experimental property.
+  /// - description: Fetches cache entry.
   public struct requestCachedResponse: ModelMethod {
     public typealias Model = SwiftCDPDomains.CacheStorage
     public static let name = "requestCachedResponse"
@@ -106,7 +106,7 @@ extension SwiftCDPDomains.CacheStorage {
 }
 
 extension SwiftCDPDomains.CacheStorage {
-  /// - intention: This is an experimental property.
+  /// - description: Requests data from cache.
   public struct requestEntries: ModelMethod {
     public typealias Model = SwiftCDPDomains.CacheStorage
     public static let name = "requestEntries"

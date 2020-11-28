@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Console"
 
 extension SwiftCDPDomains.Console {
-  /// - description: This domain is deprecated - use Runtime or Log instead.
+  /// - description: Issued when new console message is added.
   public struct messageAdded: ModelEvent {
     public typealias Model = SwiftCDPDomains.Console
     

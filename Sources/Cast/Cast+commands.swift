@@ -4,9 +4,11 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Cast"
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: Starts observing for sinks that can be used for tab mirroring, and if set,
+  /// sinks compatible with |presentationUrl| as well. When sinks are found, a
+  /// |sinksUpdated| event is fired.
+  /// Also starts observing for issue messages. When an issue is added or removed,
+  /// an |issueUpdated| event is fired.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Cast
     public static let name = "enable"
@@ -26,9 +28,7 @@ extension SwiftCDPDomains.Cast {
 }
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: Stops observing for sinks and issues.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Cast
     public static let name = "disable"
@@ -45,9 +45,8 @@ extension SwiftCDPDomains.Cast {
 }
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: Sets a sink to be used when the web page requests the browser to choose a
+  /// sink via Presentation API, Remote Playback API, or Cast SDK.
   public struct setSinkToUse: ModelMethod {
     public typealias Model = SwiftCDPDomains.Cast
     public static let name = "setSinkToUse"
@@ -67,9 +66,7 @@ extension SwiftCDPDomains.Cast {
 }
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: Starts mirroring the tab to the sink.
   public struct startTabMirroring: ModelMethod {
     public typealias Model = SwiftCDPDomains.Cast
     public static let name = "startTabMirroring"
@@ -89,9 +86,7 @@ extension SwiftCDPDomains.Cast {
 }
 
 extension SwiftCDPDomains.Cast {
-  /// - description: A domain for interacting with Cast, Presentation API, and Remote Playback API
-  /// functionalities.
-  /// - intention: This is an experimental property.
+  /// - description: Stops the active Cast session on the sink.
   public struct stopCasting: ModelMethod {
     public typealias Model = SwiftCDPDomains.Cast
     public static let name = "stopCasting"

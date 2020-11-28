@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Animation"
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Event for when an animation has been cancelled.
   public struct animationCanceled: ModelEvent {
     public typealias Model = SwiftCDPDomains.Animation
     
@@ -15,7 +15,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Event for each animation that has been created.
   public struct animationCreated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Animation
     
@@ -26,7 +26,7 @@ extension SwiftCDPDomains.Animation {
 }
 
 extension SwiftCDPDomains.Animation {
-  /// - intention: This is an experimental property.
+  /// - description: Event for animation that has been started.
   public struct animationStarted: ModelEvent {
     public typealias Model = SwiftCDPDomains.Animation
     

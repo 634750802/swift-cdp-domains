@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "ServiceWorker"
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct workerErrorReported: ModelEvent {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     
@@ -14,7 +13,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct workerRegistrationUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     
@@ -24,7 +22,6 @@ extension SwiftCDPDomains.ServiceWorker {
 }
 
 extension SwiftCDPDomains.ServiceWorker {
-  /// - intention: This is an experimental property.
   public struct workerVersionUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.ServiceWorker
     

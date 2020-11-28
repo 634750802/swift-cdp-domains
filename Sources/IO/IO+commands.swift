@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "IO"
 
 extension SwiftCDPDomains.IO {
-  /// - description: Input/Output operations for streams produced by DevTools.
+  /// - description: Close the stream, discard any temporary backing storage.
   public struct close: ModelMethod {
     public typealias Model = SwiftCDPDomains.IO
     public static let name = "close"
@@ -25,7 +25,7 @@ extension SwiftCDPDomains.IO {
 }
 
 extension SwiftCDPDomains.IO {
-  /// - description: Input/Output operations for streams produced by DevTools.
+  /// - description: Read a chunk of the stream
   public struct read: ModelMethod {
     public typealias Model = SwiftCDPDomains.IO
     public static let name = "read"
@@ -62,7 +62,7 @@ extension SwiftCDPDomains.IO {
 }
 
 extension SwiftCDPDomains.IO {
-  /// - description: Input/Output operations for streams produced by DevTools.
+  /// - description: Return UUID of Blob object specified by a remote object id.
   public struct resolveBlob: ModelMethod {
     public typealias Model = SwiftCDPDomains.IO
     public static let name = "resolveBlob"

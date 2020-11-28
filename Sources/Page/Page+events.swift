@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Page"
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
   public struct domContentEventFired: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -14,7 +13,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Emitted only when `page.interceptFileChooser` is enabled.
   public struct fileChooserOpened: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -33,7 +32,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame has been attached to its parent.
   public struct frameAttached: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -50,7 +49,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame no longer has a scheduled navigation.
   @available(*, deprecated)
   public struct frameClearedScheduledNavigation: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
@@ -62,7 +61,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame has been detached from its parent.
   public struct frameDetached: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -76,7 +75,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired once navigation of the frame has completed. Frame is now associated with the new loader.
   public struct frameNavigated: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -87,7 +86,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when opening document to write to.
+  /// - intention: This is an experimental property.
   public struct documentOpened: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -98,7 +98,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - intention: This is an experimental property.
   public struct frameResized: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -106,7 +106,9 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when a renderer-initiated navigation is requested.
+  /// Navigation may still be cancelled after the event is issued.
+  /// - intention: This is an experimental property.
   public struct frameRequestedNavigation: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -126,7 +128,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame schedules a potential navigation.
   @available(*, deprecated)
   public struct frameScheduledNavigation: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
@@ -148,7 +150,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame has started loading.
+  /// - intention: This is an experimental property.
   public struct frameStartedLoading: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -159,7 +162,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when frame has stopped loading.
+  /// - intention: This is an experimental property.
   public struct frameStoppedLoading: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -170,7 +174,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when page is about to start a download.
+  /// - intention: This is an experimental property.
   public struct downloadWillBegin: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -190,7 +195,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when download makes progress. Last call has |done| == true.
+  /// - intention: This is an experimental property.
   public struct downloadProgress: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -210,7 +216,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when interstitial page was hidden
   public struct interstitialHidden: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -218,7 +224,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when interstitial page was shown
   public struct interstitialShown: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -226,7 +232,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) has been
+  /// closed.
   public struct javascriptDialogClosed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -240,7 +247,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when a JavaScript initiated dialog (alert, confirm, prompt, or onbeforeunload) is about to
+  /// open.
   public struct javascriptDialogOpening: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -265,7 +273,7 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired for top level page lifecycle events such as navigation, load, paint, etc.
   public struct lifecycleEvent: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -283,7 +291,6 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
   public struct loadEventFired: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -293,7 +300,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when same-document navigation happens, e.g. due to history API usage or anchor navigation.
+  /// - intention: This is an experimental property.
   public struct navigatedWithinDocument: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -307,7 +315,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Compressed image data requested by the `startScreencast`.
+  /// - intention: This is an experimental property.
   public struct screencastFrame: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -324,7 +333,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when the page with currently enabled screencast was shown or hidden `.
+  /// - intention: This is an experimental property.
   public struct screencastVisibilityChanged: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -335,7 +345,8 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Fired when a new window is going to be opened, via window.open(), link click, form submission,
+  /// etc.
   public struct windowOpen: ModelEvent {
     public typealias Model = SwiftCDPDomains.Page
     
@@ -355,7 +366,9 @@ extension SwiftCDPDomains.Page {
 }
 
 extension SwiftCDPDomains.Page {
-  /// - description: Actions and events related to the inspected page belong to the page domain.
+  /// - description: Issued for every compilation cache generated. Is only available
+  /// if Page.setGenerateCompilationCache is enabled.
+  /// - intention: This is an experimental property.
   public struct compilationCacheProduced: ModelEvent, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Page
     

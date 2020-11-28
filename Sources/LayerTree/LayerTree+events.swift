@@ -4,7 +4,6 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "LayerTree"
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
   public struct layerPainted: ModelEvent {
     public typealias Model = SwiftCDPDomains.LayerTree
     
@@ -18,7 +17,6 @@ extension SwiftCDPDomains.LayerTree {
 }
 
 extension SwiftCDPDomains.LayerTree {
-  /// - intention: This is an experimental property.
   public struct layerTreeDidChange: ModelEvent {
     public typealias Model = SwiftCDPDomains.LayerTree
     

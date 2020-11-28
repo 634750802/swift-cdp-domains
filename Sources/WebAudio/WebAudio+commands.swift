@@ -4,9 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "WebAudio"
 
 extension SwiftCDPDomains.WebAudio {
-  /// - description: This domain allows inspection of Web Audio API.
-  /// https://webaudio.github.io/web-audio-api/
-  /// - intention: This is an experimental property.
+  /// - description: Enables the WebAudio domain and starts sending context lifetime events.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAudio
     public static let name = "enable"
@@ -23,9 +21,7 @@ extension SwiftCDPDomains.WebAudio {
 }
 
 extension SwiftCDPDomains.WebAudio {
-  /// - description: This domain allows inspection of Web Audio API.
-  /// https://webaudio.github.io/web-audio-api/
-  /// - intention: This is an experimental property.
+  /// - description: Disables the WebAudio domain.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAudio
     public static let name = "disable"
@@ -42,9 +38,7 @@ extension SwiftCDPDomains.WebAudio {
 }
 
 extension SwiftCDPDomains.WebAudio {
-  /// - description: This domain allows inspection of Web Audio API.
-  /// https://webaudio.github.io/web-audio-api/
-  /// - intention: This is an experimental property.
+  /// - description: Fetch the realtime data from the registered contexts.
   public struct getRealtimeData: ModelMethod {
     public typealias Model = SwiftCDPDomains.WebAudio
     public static let name = "getRealtimeData"

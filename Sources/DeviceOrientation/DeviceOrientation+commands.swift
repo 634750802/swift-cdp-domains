@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "DeviceOrientation"
 
 extension SwiftCDPDomains.DeviceOrientation {
-  /// - intention: This is an experimental property.
+  /// - description: Clears the overridden Device Orientation.
   public struct clearDeviceOrientationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.DeviceOrientation
     public static let name = "clearDeviceOrientationOverride"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.DeviceOrientation {
 }
 
 extension SwiftCDPDomains.DeviceOrientation {
-  /// - intention: This is an experimental property.
+  /// - description: Overrides the Device Orientation.
   public struct setDeviceOrientationOverride: ModelMethod {
     public typealias Model = SwiftCDPDomains.DeviceOrientation
     public static let name = "setDeviceOrientationOverride"

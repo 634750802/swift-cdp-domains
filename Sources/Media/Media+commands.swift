@@ -4,8 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Media"
 
 extension SwiftCDPDomains.Media {
-  /// - description: This domain allows detailed inspection of media elements
-  /// - intention: This is an experimental property.
+  /// - description: Enables the Media domain
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Media
     public static let name = "enable"
@@ -22,8 +21,7 @@ extension SwiftCDPDomains.Media {
 }
 
 extension SwiftCDPDomains.Media {
-  /// - description: This domain allows detailed inspection of media elements
-  /// - intention: This is an experimental property.
+  /// - description: Disables the Media domain.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Media
     public static let name = "disable"

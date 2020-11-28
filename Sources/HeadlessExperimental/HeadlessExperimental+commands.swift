@@ -4,8 +4,10 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "HeadlessExperimental"
 
 extension SwiftCDPDomains.HeadlessExperimental {
-  /// - description: This domain provides experimental commands only supported in headless mode.
-  /// - intention: This is an experimental property.
+  /// - description: Sends a BeginFrame to the target and returns when the frame was completed. Optionally captures a
+  /// screenshot from the resulting frame. Requires that the target was created with enabled
+  /// BeginFrameControl. Designed for use with --run-all-compositor-stages-before-draw, see also
+  /// https://goo.gl/3zHXhB for more background.
   public struct beginFrame: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeadlessExperimental
     public static let name = "beginFrame"
@@ -50,8 +52,7 @@ extension SwiftCDPDomains.HeadlessExperimental {
 }
 
 extension SwiftCDPDomains.HeadlessExperimental {
-  /// - description: This domain provides experimental commands only supported in headless mode.
-  /// - intention: This is an experimental property.
+  /// - description: Disables headless events for the target.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeadlessExperimental
     public static let name = "disable"
@@ -68,8 +69,7 @@ extension SwiftCDPDomains.HeadlessExperimental {
 }
 
 extension SwiftCDPDomains.HeadlessExperimental {
-  /// - description: This domain provides experimental commands only supported in headless mode.
-  /// - intention: This is an experimental property.
+  /// - description: Enables headless events for the target.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.HeadlessExperimental
     public static let name = "enable"

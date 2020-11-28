@@ -4,13 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "CSS"
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Fires whenever a web font is updated.  A non-empty font parameter indicates a successfully loaded
+  /// web font
   public struct fontsUpdated: ModelEvent {
     public typealias Model = SwiftCDPDomains.CSS
     
@@ -21,13 +16,8 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Fires whenever a MediaQuery result changes (for example, after a browser window has been
+  /// resized.) The current implementation considers only viewport-dependent media features.
   public struct mediaQueryResultChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.CSS
     
@@ -35,13 +25,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Fired whenever an active document stylesheet is added.
   public struct styleSheetAdded: ModelEvent {
     public typealias Model = SwiftCDPDomains.CSS
     
@@ -52,13 +36,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Fired whenever a stylesheet is changed as a result of the client operation.
   public struct styleSheetChanged: ModelEvent {
     public typealias Model = SwiftCDPDomains.CSS
     
@@ -68,13 +46,7 @@ extension SwiftCDPDomains.CSS {
 }
 
 extension SwiftCDPDomains.CSS {
-  /// - description: This domain exposes CSS read/write operations. All CSS objects (stylesheets, rules, and styles)
-  /// have an associated `id` used in subsequent operations on the related object. Each object type has
-  /// a specific `id` structure, and those are not interchangeable between objects of different kinds.
-  /// CSS objects can be loaded using the `get*ForNode()` calls (which accept a DOM node id). A client
-  /// can also keep track of stylesheets via the `styleSheetAdded`/`styleSheetRemoved` events and
-  /// subsequently load the required stylesheet contents using the `getStyleSheet[Text]()` methods.
-  /// - intention: This is an experimental property.
+  /// - description: Fired whenever an active document stylesheet is removed.
   public struct styleSheetRemoved: ModelEvent {
     public typealias Model = SwiftCDPDomains.CSS
     

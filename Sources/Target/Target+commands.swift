@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Target"
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Activates (focuses) the target.
   public struct activateTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "activateTarget"
@@ -24,7 +24,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Attaches to the target with given id.
   public struct attachToTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "attachToTarget"
@@ -53,7 +53,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Attaches to the browser target, only uses flat sessionId mode.
+  /// - intention: This is an experimental property.
   public struct attachToBrowserTarget: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "attachToBrowserTarget"
@@ -73,7 +74,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Closes the target. If the target is a page that gets closed too.
   public struct closeTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "closeTarget"
@@ -96,7 +97,13 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Inject object to the target's main frame that provides a communication
+  /// channel with browser target.
+  /// Injected object will be available as `window[bindingName]`.
+  /// The object has the follwing API:
+  /// - `binding.send(json)` - a method to send messages over the remote debugging protocol
+  /// - `binding.onmessage = json => handleMessage(json)` - a callback that will be called for the protocol notifications and command responses.
+  /// - intention: This is an experimental property.
   public struct exposeDevToolsProtocol: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "exposeDevToolsProtocol"
@@ -120,7 +127,9 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
+  /// one.
+  /// - intention: This is an experimental property.
   public struct createBrowserContext: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "createBrowserContext"
@@ -152,7 +161,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Returns all browser contexts created with `Target.createBrowserContext` method.
+  /// - intention: This is an experimental property.
   public struct getBrowserContexts: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "getBrowserContexts"
@@ -172,7 +182,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Creates a new page.
   public struct createTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "createTarget"
@@ -223,7 +233,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Detaches session with given id.
   public struct detachFromTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "detachFromTarget"
@@ -248,7 +258,9 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Deletes a BrowserContext. All the belonging pages will be closed without calling their
+  /// beforeunload hooks.
+  /// - intention: This is an experimental property.
   public struct disposeBrowserContext: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "disposeBrowserContext"
@@ -268,7 +280,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Returns information about a target.
+  /// - intention: This is an experimental property.
   public struct getTargetInfo: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "getTargetInfo"
@@ -290,7 +303,7 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Retrieves a list of available targets.
   public struct getTargets: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "getTargets"
@@ -310,7 +323,9 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Sends protocol message over session with given id.
+  /// Consider using flat mode instead; see commands attachToTarget, setAutoAttach,
+  /// and crbug.com/991325.
   @available(*, deprecated)
   public struct sendMessageToTarget: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
@@ -339,7 +354,10 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Controls whether to automatically attach to new targets which are considered to be related to
+  /// this one. When turned on, attaches to all existing related targets as well. When turned off,
+  /// automatically detaches from all currently attached targets.
+  /// - intention: This is an experimental property.
   public struct setAutoAttach: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "setAutoAttach"
@@ -371,7 +389,8 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Controls whether to discover available targets and notify via
+  /// `targetCreated/targetInfoChanged/targetDestroyed` events.
   public struct setDiscoverTargets: ModelMethod {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "setDiscoverTargets"
@@ -392,7 +411,9 @@ extension SwiftCDPDomains.Target {
 }
 
 extension SwiftCDPDomains.Target {
-  /// - description: Supports additional targets discovery and allows to attach to them.
+  /// - description: Enables target discovery for the specified locations, when `setDiscoverTargets` was set to
+  /// `true`.
+  /// - intention: This is an experimental property.
   public struct setRemoteLocations: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Target
     public static let name = "setRemoteLocations"

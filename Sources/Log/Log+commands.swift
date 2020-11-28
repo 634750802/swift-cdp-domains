@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Log"
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: Clears the log.
   public struct clear: ModelMethod {
     public typealias Model = SwiftCDPDomains.Log
     public static let name = "clear"
@@ -21,7 +21,7 @@ extension SwiftCDPDomains.Log {
 }
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: Disables log domain, prevents further log entries from being reported to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Log
     public static let name = "disable"
@@ -38,7 +38,8 @@ extension SwiftCDPDomains.Log {
 }
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: Enables log domain, sends the entries collected so far to the client by means of the
+  /// `entryAdded` notification.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Log
     public static let name = "enable"
@@ -55,7 +56,7 @@ extension SwiftCDPDomains.Log {
 }
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: start violation reporting.
   public struct startViolationsReport: ModelMethod {
     public typealias Model = SwiftCDPDomains.Log
     public static let name = "startViolationsReport"
@@ -76,7 +77,7 @@ extension SwiftCDPDomains.Log {
 }
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: Stop violation reporting.
   public struct stopViolationsReport: ModelMethod {
     public typealias Model = SwiftCDPDomains.Log
     public static let name = "stopViolationsReport"

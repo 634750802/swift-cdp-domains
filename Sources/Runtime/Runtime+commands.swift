@@ -4,11 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Runtime"
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Add handler to promise with given promise object id.
   public struct awaitPromise: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "awaitPromise"
@@ -42,11 +38,8 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Calls function with given declaration on the given object. Object group of the result is
+  /// inherited from the target object.
   public struct callFunctionOn: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "callFunctionOn"
@@ -115,11 +108,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Compiles expression.
   public struct compileScript: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "compileScript"
@@ -158,11 +147,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Disables reporting of execution contexts creation.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "disable"
@@ -179,11 +164,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Discards collected exceptions and console API calls.
   public struct discardConsoleEntries: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "discardConsoleEntries"
@@ -200,11 +181,9 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Enables reporting of execution contexts creation by means of `executionContextCreated` event.
+  /// When the reporting gets enabled the event will be sent immediately for each existing execution
+  /// context.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "enable"
@@ -221,11 +200,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Evaluates expression on global object.
   public struct evaluate: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "evaluate"
@@ -318,11 +293,8 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Returns the isolate id.
+  /// - intention: This is an experimental property.
   public struct getIsolateId: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "getIsolateId"
@@ -342,11 +314,9 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Returns the JavaScript heap usage.
+  /// It is the total usage of the corresponding isolate not scoped to a particular Runtime.
+  /// - intention: This is an experimental property.
   public struct getHeapUsage: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "getHeapUsage"
@@ -368,11 +338,8 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Returns properties of a given object. Object group of the result is inherited from the target
+  /// object.
   public struct getProperties: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "getProperties"
@@ -419,11 +386,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Returns all let, const and class variables from global scope.
   public struct globalLexicalScopeNames: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "globalLexicalScopeNames"
@@ -446,11 +409,6 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
   public struct queryObjects: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "queryObjects"
@@ -478,11 +436,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Releases remote object with given id.
   public struct releaseObject: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "releaseObject"
@@ -503,11 +457,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Releases all remote objects that belong to a given group.
   public struct releaseObjectGroup: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "releaseObjectGroup"
@@ -528,11 +478,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Tells inspected instance to run if it was waiting for debugger to attach.
   public struct runIfWaitingForDebugger: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "runIfWaitingForDebugger"
@@ -549,11 +495,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Runs script with given id in a given context.
   public struct runScript: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "runScript"
@@ -610,11 +552,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Enables or disables async call stacks tracking.
   public struct setAsyncCallStackDepth: ModelMethod {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "setAsyncCallStackDepth"
@@ -636,11 +574,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - intention: This is an experimental property.
   public struct setCustomObjectFormatterEnabled: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "setCustomObjectFormatterEnabled"
@@ -660,11 +594,7 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - intention: This is an experimental property.
   public struct setMaxCallStackSizeToCapture: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "setMaxCallStackSizeToCapture"
@@ -684,11 +614,9 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: Terminate current or next JavaScript execution.
+  /// Will cancel the termination when the outer-most script execution ends.
+  /// - intention: This is an experimental property.
   public struct terminateExecution: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "terminateExecution"
@@ -705,11 +633,15 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: If executionContextId is empty, adds binding with the given name on the
+  /// global objects of all inspected contexts, including those created later,
+  /// bindings survive reloads.
+  /// If executionContextId is specified, adds binding only on global object of
+  /// given execution context.
+  /// Binding function takes exactly one argument, this argument should be string,
+  /// in case of any other input, function throws an exception.
+  /// Each binding function call produces Runtime.bindingCalled notification.
+  /// - intention: This is an experimental property.
   public struct addBinding: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "addBinding"
@@ -732,11 +664,9 @@ extension SwiftCDPDomains.Runtime {
 }
 
 extension SwiftCDPDomains.Runtime {
-  /// - description: Runtime domain exposes JavaScript runtime by means of remote evaluation and mirror objects.
-  /// Evaluation results are returned as mirror object that expose object type, string representation
-  /// and unique identifier that can be used for further object reference. Original objects are
-  /// maintained in memory unless they are either explicitly released or are released along with the
-  /// other objects in their object group.
+  /// - description: This method does not remove binding function from global object but
+  /// unsubscribes current runtime agent from Runtime.bindingCalled notifications.
+  /// - intention: This is an experimental property.
   public struct removeBinding: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Runtime
     public static let name = "removeBinding"

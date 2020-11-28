@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Inspector"
 
 extension SwiftCDPDomains.Inspector {
-  /// - intention: This is an experimental property.
+  /// - description: Fired when remote debugging connection is about to be terminated. Contains detach reason.
   public struct detached: ModelEvent {
     public typealias Model = SwiftCDPDomains.Inspector
     
@@ -15,7 +15,7 @@ extension SwiftCDPDomains.Inspector {
 }
 
 extension SwiftCDPDomains.Inspector {
-  /// - intention: This is an experimental property.
+  /// - description: Fired when debugging target has crashed
   public struct targetCrashed: ModelEvent {
     public typealias Model = SwiftCDPDomains.Inspector
     
@@ -23,7 +23,7 @@ extension SwiftCDPDomains.Inspector {
 }
 
 extension SwiftCDPDomains.Inspector {
-  /// - intention: This is an experimental property.
+  /// - description: Fired when debugging target has reloaded after crash
   public struct targetReloadedAfterCrash: ModelEvent {
     public typealias Model = SwiftCDPDomains.Inspector
     

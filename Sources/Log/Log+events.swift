@@ -4,7 +4,7 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol events in domain "Log"
 
 extension SwiftCDPDomains.Log {
-  /// - description: Provides access to log entries.
+  /// - description: Issued when new message was logged.
   public struct entryAdded: ModelEvent {
     public typealias Model = SwiftCDPDomains.Log
     

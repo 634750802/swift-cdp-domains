@@ -4,7 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Browser"
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Set permission settings for given origin.
+  /// - intention: This is an experimental property.
   public struct setPermission: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "setPermission"
@@ -37,7 +38,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Grant specific permissions to the given origin and reject all others.
+  /// - intention: This is an experimental property.
   public struct grantPermissions: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "grantPermissions"
@@ -65,7 +67,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Reset all permission management for all origins.
+  /// - intention: This is an experimental property.
   public struct resetPermissions: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "resetPermissions"
@@ -86,7 +89,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Set the behavior when downloading a file.
+  /// - intention: This is an experimental property.
   public struct setDownloadBehavior: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "setDownloadBehavior"
@@ -118,7 +122,7 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Close browser gracefully.
   public struct close: ModelMethod {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "close"
@@ -135,7 +139,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Crashes browser on the main thread.
+  /// - intention: This is an experimental property.
   public struct crash: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "crash"
@@ -152,7 +157,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Crashes GPU process.
+  /// - intention: This is an experimental property.
   public struct crashGpuProcess: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "crashGpuProcess"
@@ -169,7 +175,7 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Returns version information.
   public struct getVersion: ModelMethod {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getVersion"
@@ -197,7 +203,9 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Returns the command line switches for the browser process if, and only if
+  /// --enable-automation is on the commandline.
+  /// - intention: This is an experimental property.
   public struct getBrowserCommandLine: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getBrowserCommandLine"
@@ -217,7 +225,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Get Chrome histograms.
+  /// - intention: This is an experimental property.
   public struct getHistograms: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getHistograms"
@@ -247,7 +256,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Get a Chrome histogram by name.
+  /// - intention: This is an experimental property.
   public struct getHistogram: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getHistogram"
@@ -275,7 +285,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Get position and size of the browser window.
+  /// - intention: This is an experimental property.
   public struct getWindowBounds: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getWindowBounds"
@@ -300,7 +311,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Get the browser window that contains the devtools target.
+  /// - intention: This is an experimental property.
   public struct getWindowForTarget: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "getWindowForTarget"
@@ -327,7 +339,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Set position and/or size of the browser window.
+  /// - intention: This is an experimental property.
   public struct setWindowBounds: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "setWindowBounds"
@@ -353,7 +366,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Set dock tile details, platform-specific.
+  /// - intention: This is an experimental property.
   public struct setDockTile: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "setDockTile"
@@ -377,7 +391,8 @@ extension SwiftCDPDomains.Browser {
 }
 
 extension SwiftCDPDomains.Browser {
-  /// - description: The Browser domain defines methods and events for browser managing.
+  /// - description: Invoke custom browser commands used by telemetry.
+  /// - intention: This is an experimental property.
   public struct executeBrowserCommand: ModelMethod, ExperimentalFeature {
     public typealias Model = SwiftCDPDomains.Browser
     public static let name = "executeBrowserCommand"

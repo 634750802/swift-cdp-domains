@@ -4,8 +4,8 @@ import ChromeDevtoolProtocol
 // Generated code, ChromeDevtoolsProtocol commands in domain "Audits"
 
 extension SwiftCDPDomains.Audits {
-  /// - description: Audits domain allows investigation of page violations and possible improvements.
-  /// - intention: This is an experimental property.
+  /// - description: Returns the response body and size if it were re-encoded with the specified settings. Only
+  /// applies to images.
   public struct getEncodedResponse: ModelMethod {
     public typealias Model = SwiftCDPDomains.Audits
     public static let name = "getEncodedResponse"
@@ -45,8 +45,7 @@ extension SwiftCDPDomains.Audits {
 }
 
 extension SwiftCDPDomains.Audits {
-  /// - description: Audits domain allows investigation of page violations and possible improvements.
-  /// - intention: This is an experimental property.
+  /// - description: Disables issues domain, prevents further issues from being reported to the client.
   public struct disable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Audits
     public static let name = "disable"
@@ -63,8 +62,8 @@ extension SwiftCDPDomains.Audits {
 }
 
 extension SwiftCDPDomains.Audits {
-  /// - description: Audits domain allows investigation of page violations and possible improvements.
-  /// - intention: This is an experimental property.
+  /// - description: Enables issues domain, sends the issues collected so far to the client by means of the
+  /// `issueAdded` event.
   public struct enable: ModelMethod {
     public typealias Model = SwiftCDPDomains.Audits
     public static let name = "enable"
